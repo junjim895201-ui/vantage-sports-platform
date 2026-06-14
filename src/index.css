@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-slate-800 antialiased;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex min-h-11 items-center justify-center rounded-lg px-5 py-2.5 text-sm font-semibold transition-opacity hover:opacity-90;
+  }
+  .btn-primary {
+    @apply bg-accent text-white;
+  }
+  .btn-secondary {
+    @apply border border-navy-light bg-white text-navy;
+  }
+  .btn-outline-light {
+    @apply border border-white/50 bg-transparent text-white;
+  }
+  .btn-whatsapp {
+    @apply bg-[#25D366] text-white;
+  }
+  .btn-facebook {
+    @apply bg-[#1877F2] text-white;
+  }
+  .card {
+    @apply rounded-xl border border-slate-200 bg-white p-5;
+  }
+  .section {
+    @apply py-10 md:py-14;
+  }
+  .container-main {
+    @apply mx-auto w-full max-w-6xl px-4;
+  }
+}

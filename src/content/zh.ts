@@ -26,17 +26,18 @@ export const site = {
 export const nav = [
   { label: "首页", path: "/" },
   { label: "产品", path: "/products" },
-  { label: "OEM", path: "/oem-manufacturing" },
+  { label: "对比", path: "/product-comparison" },
   { label: "分销商", path: "/distributor-program" },
-  { label: "试打申请", path: "/shuttle-testing" },
-  { label: "工厂介绍", path: "/about-factory" },
+  { label: "伙伴", path: "/factory-partners" },
+  { label: "下载", path: "/download-center" },
 ];
 
 export const footerNav = [
-  { label: "OEM 制造", path: "/oem-manufacturing" },
+  { label: "分销商 CRM", path: "/distributor-crm" },
+  { label: "试打数据库", path: "/club-testing-database" },
   { label: "试打计划", path: "/shuttle-testing" },
+  { label: "下载中心", path: "/download-center" },
   { label: "资源中心", path: "/distributor-resources" },
-  { label: "媒体库", path: "/media-library" },
 ];
 
 export const home = {
@@ -193,7 +194,8 @@ export const distributor = {
   ],
   leadFormTitle: "分销商意向表",
   leadFormSubtitle: "介绍您的业务。VANTAGE SPORTS 将在 2 个工作日内回复。",
-  leadFormNote: "静态表单 — CRM 对接即将上线。也可通过 WhatsApp 更快联系。",
+  leadFormNote:
+    "提交内容将记录至 VANTAGE 线索系统。团队将在 2 个工作日内回复 — 也可通过 WhatsApp 加快跟进。",
   leadFormFields: {
     country: "国家",
     company: "公司",
@@ -256,7 +258,8 @@ export const testing = {
   ctaButton: "申请免费试打",
   applicationTitle: "免费羽毛球试打申请",
   applicationSubtitle: "填写下方表单。符合条件的俱乐部、分销商及体育店可获 2–4 筒样品。",
-  applicationNote: "静态表单 — CRM 对接即将上线。优先面向 20 人以上俱乐部及活跃分销商。",
+  applicationNote:
+    "申请将记录至 VANTAGE 线索系统。优先面向 20 人以上俱乐部及活跃分销商 — 可通过 WhatsApp 加快审核。",
   organizationTypes: ["羽毛球俱乐部", "学院", "体育用品店", "分销商", "OEM 品牌", "其他"],
   memberOptions: ["20 人以下", "20 – 50 人", "50 – 100 人", "100 人以上", "不适用 — 零售/分销"],
   productTestOptions: [
@@ -345,11 +348,11 @@ export const common = {
   patents: "专利",
   copyrightMarkets: "市场",
   formSuccessContact:
-    "感谢提交！您的意向已记录。CRM 对接即将上线 — 请同时通过 WhatsApp 或 Facebook 联系 VANTAGE SPORTS 以更快获得回复。",
+    "感谢提交！您的意向已记录并纳入 VANTAGE 线索系统。团队将在 2 个工作日内跟进 — 也可通过 WhatsApp 加快回复。",
   formSuccessDistributor:
-    "感谢提交！您的分销商申请已记录。VANTAGE SPORTS 将在 2 个工作日内回复。可通过 WhatsApp 加快跟进。",
+    "感谢提交！您的分销商申请已记录并纳入跟踪系统。VANTAGE SPORTS 将在 2 个工作日内回复。可通过 WhatsApp 加快跟进。",
   formSuccessTesting:
-    "感谢提交！您的试打申请已记录。VANTAGE SPORTS 将在 3 个工作日内审核。可通过 WhatsApp 加快跟进。",
+    "感谢提交！您的试打申请已记录并纳入跟踪系统。VANTAGE SPORTS 将在 3 个工作日内审核。可通过 WhatsApp 加快跟进。",
   whatsappPrefill: "您好 VANTAGE SPORTS，我对合作感兴趣。",
   emailSubject: "VANTAGE SPORTS 合作咨询",
   countries: ["泰国", "马来西亚", "菲律宾", "越南"],
@@ -370,7 +373,29 @@ export const common = {
     factoryPartners: "VANTAGE SPORTS 工厂伙伴, INFIV OEM, 羽毛球制造 中国",
     mediaLibrary: "VANTAGE SPORTS 媒体, 羽毛球工厂照片, 产品图片, 羽毛球视频",
     distributorResources: "VANTAGE SPORTS 分销商资源, 产品目录, 东南亚羽毛球 B2B 素材",
+    distributorCrm: "VANTAGE SPORTS 分销商 CRM, 线索跟踪, 东盟伙伴招募",
+    clubTestingDatabase: "VANTAGE SPORTS 俱乐部试打数据库, 羽毛球样品申请 东盟",
+    productComparison: "G4 G6 G7 羽毛球对比, 赛事 俱乐部 经济训练 VANTAGE SPORTS",
+    downloadCenter: "VANTAGE SPORTS 下载中心, 产品目录 数据单 分销商素材",
   },
+  leadsTable: {
+    date: "日期",
+    type: "类型",
+    country: "国家",
+    contact: "联系人",
+    status: "状态",
+    source: "来源",
+    noData: "暂无记录。提交表单后可在此查看。",
+    exportJson: "导出 JSON",
+    refresh: "刷新",
+    total: "线索总数",
+    newLeads: "新线索",
+    viewCrm: "查看 CRM",
+    viewDatabase: "查看数据库",
+    localStorageNote: "线索暂存于本浏览器，待后端 CRM 对接后可同步。可导出 JSON 手动导入。",
+  },
+  leadTypes: { contact: "联系", distributor: "分销商", testing: "俱乐部试打" },
+  leadStatuses: { new: "新", reviewing: "审核中", qualified: "合格", closed: "已关闭" },
 };
 
 export const marketCoverage = {
@@ -444,6 +469,14 @@ export const factoryPartners = {
   futureTitle: "未来 OEM 伙伴",
   futureNote:
     "VANTAGE SPORTS 正在引入更多制造伙伴，覆盖球拍、服装及专业 OEM 线。欢迎洽谈早期合作。",
+  recruitmentTitle: "与 VANTAGE SPORTS 合作",
+  recruitmentDesc:
+    "我们招募东盟分销商、俱乐部与体育店 — 不面向终端消费者。工厂伙伴负责生产；VANTAGE SPORTS 负责市场开发、线索跟踪与渠道上市。",
+  recruitmentCtas: [
+    { label: "申请成为分销商", path: "/distributor-program#apply" },
+    { label: "预约工厂参观", path: "/contact" },
+    { label: "下载伙伴资料包", path: "/download-center" },
+  ],
   partners: [
     {
       name: "INFIV",
@@ -633,7 +666,7 @@ export const contact = {
   title: "联系",
   subtitle: "通过 WhatsApp、Facebook、邮件或下方意向表联系 VANTAGE SPORTS 合作团队。",
   formTitle: "VANTAGE SPORTS 意向表",
-  formNote: "表单仅用于收集咨询。CRM 对接即将上线。",
+  formNote: "提交内容将记录至 VANTAGE 线索系统。合作团队将在 2 个工作日内回复。",
   fields: {
     company: "公司 / 机构",
     name: "联系人",
@@ -653,6 +686,136 @@ export const contact = {
     "产品目录",
     "其他",
   ],
+};
+
+export const distributorCrm = {
+  seo: {
+    title: "分销商 CRM | VANTAGE SPORTS 伙伴招募",
+    description:
+      "VANTAGE SPORTS 分销商 CRM — 统一跟踪合作线索、分销商申请及东盟招募管道。",
+  },
+  title: "分销商 CRM",
+  subtitle: "跟踪泰国、马来西亚、菲律宾和越南的分销商及合作线索。",
+  intro:
+    "VANTAGE SPORTS 招募平台捕获每一条分销商咨询、申请与联系线索。在后端 CRM 对接前，使用本面板审阅管道状态。",
+  features: [
+    { title: "线索采集", desc: "分销商、联系及试打表单统一写入线索库。" },
+    { title: "管道状态", desc: "新线索 → 审核中 → 合格 → 已关闭 招募跟进流程。" },
+    { title: "可导出", desc: "导出 JSON，可导入 HubSpot、Salesforce 或自建 CRM。" },
+    { title: "语言追踪", desc: "每条线索记录 EN 或 ZH 语言及来源页面，便于市场归因。" },
+  ],
+  pipelineTitle: "招募管道",
+  pipelineSteps: ["收到新咨询", "区域与用量审核", "样品寄送与报价", "签署合作协议"],
+};
+
+export const clubTestingDatabase = {
+  seo: {
+    title: "俱乐部试打数据库 | VANTAGE SPORTS",
+    description:
+      "VANTAGE SPORTS 俱乐部试打数据库 — 查看来自东盟俱乐部、学院及体育店的羽毛球试打申请。",
+  },
+  title: "俱乐部试打数据库",
+  subtitle: "免费 G4、G6、G7 羽毛球试打申请统一登记库。",
+  intro: "网站上提交的每一条试打申请均在此索引。批准样品寄送前，可审阅机构类型、市场及产品意向。",
+  columns: {
+    organization: "机构",
+    type: "类型",
+    country: "国家",
+    products: "产品",
+    members: "规模",
+    submitted: "提交时间",
+  },
+  statsLabels: {
+    total: "申请总数",
+    clubs: "俱乐部与学院",
+    shops: "体育用品店",
+    distributors: "分销商",
+  },
+};
+
+export const productComparison = {
+  seo: {
+    title: "G4 G6 G7 产品对比 | VANTAGE SPORTS",
+    description:
+      "对比 G4 赛事级、G6 俱乐部训练、G7 经济训练羽毛球 — 规格、定位及面向东盟分销商的推荐渠道。",
+  },
+  title: "产品对比",
+  subtitle: "G 系列羽毛球并排对比，助力分销商铺货与俱乐部采购决策。",
+  intro:
+    "使用本矩阵在赛事、俱乐部训练及经济段定位 G4、G6、G7。所有 SKU 由 INFIV（OEM 伙伴）制造，由 VANTAGE SPORTS 分销。",
+  tableHeaders: {
+    attribute: "属性",
+    g4: "G4 — 赛事级",
+    g6: "G6 — 俱乐部训练",
+    g7: "G7 — 经济训练",
+  },
+  rows: [
+    { label: "等级", g4: "赛事级", g6: "俱乐部训练", g7: "经济训练" },
+    { label: "羽毛", g4: "专利鹅毛 · 全圆", g6: "鹅背毛 · 0.15mm", g7: "金丝鸭毛 · 全圆" },
+    { label: "主渠道", g4: "赛事 · 高端门店", g6: "俱乐部 · 学院", g7: "门店 · 学校 · 新区域" },
+    { label: "耐用性", g4: "竞技飞行优先", g6: "极高训练耐用", g7: "每筒高性价比" },
+    { label: "起订特征", g4: "中高端订单", g6: "俱乐部大货供应", g7: "入门友好起订" },
+    { label: "东盟适配", g4: "潮湿市场 · 77–79 速", g6: "日常学院训练", g7: "价格敏感增长市场" },
+  ],
+  ctaTitle: "准备订购样品？",
+  ctaDesc: "申请免费试打或提交分销商申请。",
+};
+
+export const downloadCenter = {
+  seo: {
+    title: "下载中心 | VANTAGE SPORTS",
+    description:
+      "VANTAGE SPORTS 下载中心 — 产品目录、G 系列数据单、分销商申请表及伙伴营销素材。",
+  },
+  title: "下载中心",
+  subtitle: "面向分销商、俱乐部及体育店的目录、数据单与伙伴素材。",
+  intro:
+    "索取或下载 VANTAGE SPORTS 伙伴资料。PDF 目录可按需提供 — 提交联系表单后，我们将邮件发送含出口价格档的目录。",
+  categories: [
+    {
+      title: "产品目录",
+      desc: "含出口价格档的完整 G4 / G6 / G7 羽毛球与装备目录。",
+      type: "目录",
+      cta: "索取目录",
+      path: "/contact",
+    },
+    {
+      title: "G 系列数据单",
+      desc: "各 SKU 规格、飞行指南及等级定位。",
+      type: "数据单",
+      cta: "查看对比",
+      path: "/product-comparison",
+    },
+    {
+      title: "分销商申请包",
+      desc: "申请表、计划概览及市场覆盖摘要。",
+      type: "表单",
+      cta: "立即申请",
+      path: "/distributor-program#apply",
+    },
+    {
+      title: "俱乐部试打申请",
+      desc: "免费 G4、G6、G7 样品筒申请表及评估清单。",
+      type: "表单",
+      cta: "申请试打",
+      path: "/shuttle-testing#apply",
+    },
+    {
+      title: "工厂伙伴概览",
+      desc: "制造伙伴网络、INFIV OEM 能力及品控标准。",
+      type: "参考",
+      cta: "查看伙伴",
+      path: "/factory-partners",
+    },
+    {
+      title: "媒体与品牌素材",
+      desc: "工厂照片、产品图片及 VANTAGE SPORTS 品牌规范。",
+      type: "素材",
+      cta: "浏览媒体",
+      path: "/media-library",
+    },
+  ],
+  exportNote: "需要批量素材访问？请携带分销商简介联系 partners@vantage-sports.com。",
 };
 
 // Re-export type for product catalog typing

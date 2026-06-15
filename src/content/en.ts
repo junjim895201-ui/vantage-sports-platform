@@ -25,17 +25,18 @@ export const site = {
 export const nav = [
   { label: "Home", path: "/" },
   { label: "Products", path: "/products" },
-  { label: "OEM", path: "/oem-manufacturing" },
+  { label: "Compare", path: "/product-comparison" },
   { label: "Distributors", path: "/distributor-program" },
-  { label: "Shuttle Testing", path: "/shuttle-testing" },
-  { label: "About Factory", path: "/about-factory" },
+  { label: "Partners", path: "/factory-partners" },
+  { label: "Downloads", path: "/download-center" },
 ];
 
 export const footerNav = [
-  { label: "OEM Manufacturing", path: "/oem-manufacturing" },
+  { label: "Distributor CRM", path: "/distributor-crm" },
+  { label: "Club Testing DB", path: "/club-testing-database" },
   { label: "Shuttle Testing", path: "/shuttle-testing" },
+  { label: "Download Center", path: "/download-center" },
   { label: "Resource Center", path: "/distributor-resources" },
-  { label: "Media Library", path: "/media-library" },
 ];
 
 export const home = {
@@ -180,7 +181,8 @@ export const distributor = {
   ],
   leadFormTitle: "Distributor Lead Form",
   leadFormSubtitle: "Tell us about your business. VANTAGE SPORTS responds within 2 business days.",
-  leadFormNote: "Static form — CRM integration coming soon. Also reach us on WhatsApp for faster response.",
+  leadFormNote:
+    "Submissions are recorded in the VANTAGE lead system. Our team responds within 2 business days — also reach us on WhatsApp for faster follow-up.",
   leadFormFields: {
     country: "Country",
     company: "Company",
@@ -237,7 +239,8 @@ export const testing = {
   ctaButton: "Apply Free Shuttle Testing",
   applicationTitle: "Free Shuttle Testing Application",
   applicationSubtitle: "Complete the form below. Qualified clubs, distributors, and sports shops receive 2–4 sample tubes.",
-  applicationNote: "Static form — CRM integration coming soon. Priority for 20+ member clubs and active distributors.",
+  applicationNote:
+    "Applications are recorded in the VANTAGE lead system. Priority for 20+ member clubs and active distributors — message us on WhatsApp for faster review.",
   organizationTypes: ["Badminton Club", "Academy", "Sports Shop", "Distributor", "OEM Brand", "Other"],
   memberOptions: ["Under 20", "20 – 50", "50 – 100", "100+", "N/A — Retail/Distributor"],
   productTestOptions: ["G4 Tournament Grade", "G6 Club Training", "G7 Economy Training", "G4 + G6 + G7 Mix", "Not sure"],
@@ -320,11 +323,11 @@ export const common = {
   patents: "Patents",
   copyrightMarkets: "Markets",
   formSuccessContact:
-    "Thank you! Your lead has been recorded. CRM integration coming soon — please also contact VANTAGE SPORTS via WhatsApp or Facebook for faster response.",
+    "Thank you! Your lead has been recorded and tracked in the VANTAGE lead system. Our team will follow up within 2 business days — also reach us on WhatsApp for faster response.",
   formSuccessDistributor:
-    "Thank you! Your distributor application has been recorded. VANTAGE SPORTS will respond within 2 business days. Message us on WhatsApp for faster follow-up.",
+    "Thank you! Your distributor application has been recorded and tracked. VANTAGE SPORTS will respond within 2 business days. Message us on WhatsApp for faster follow-up.",
   formSuccessTesting:
-    "Thank you! Your shuttle testing application has been recorded. VANTAGE SPORTS will review within 3 business days. Message us on WhatsApp for faster follow-up.",
+    "Thank you! Your shuttle testing application has been recorded and tracked. VANTAGE SPORTS will review within 3 business days. Message us on WhatsApp for faster follow-up.",
   whatsappPrefill: "Hello VANTAGE SPORTS, I am interested in partnership.",
   emailSubject: "VANTAGE SPORTS Partnership Inquiry",
   countries: ["Thailand", "Malaysia", "Philippines", "Vietnam"],
@@ -349,6 +352,38 @@ export const common = {
     mediaLibrary: "VANTAGE SPORTS media, badminton factory photos, product images, shuttlecock video",
     distributorResources:
       "VANTAGE SPORTS distributor resources, product catalog, badminton B2B assets ASEAN",
+    distributorCrm: "VANTAGE SPORTS distributor CRM, lead tracking, ASEAN partner recruitment",
+    clubTestingDatabase: "VANTAGE SPORTS club testing database, shuttle sample applications ASEAN",
+    productComparison: "G4 G6 G7 shuttlecock comparison, tournament club economy training VANTAGE SPORTS",
+    downloadCenter: "VANTAGE SPORTS download center, product catalog datasheets distributor assets",
+  },
+  leadsTable: {
+    date: "Date",
+    type: "Type",
+    country: "Country",
+    contact: "Contact",
+    status: "Status",
+    source: "Source",
+    noData: "No leads recorded yet. Submit a form to see entries here.",
+    exportJson: "Export JSON",
+    refresh: "Refresh",
+    total: "Total Leads",
+    newLeads: "New",
+    viewCrm: "View in CRM",
+    viewDatabase: "View Database",
+    localStorageNote:
+      "Leads are stored locally in this browser until backend CRM sync is connected. Export JSON for manual import.",
+  },
+  leadTypes: {
+    contact: "Contact",
+    distributor: "Distributor",
+    testing: "Club Testing",
+  },
+  leadStatuses: {
+    new: "New",
+    reviewing: "Reviewing",
+    qualified: "Qualified",
+    closed: "Closed",
   },
 };
 
@@ -422,6 +457,14 @@ export const factoryPartners = {
   activeTitle: "Active Manufacturing Partners",
   futureTitle: "Future OEM Partners",
   futureNote: "VANTAGE SPORTS is onboarding additional manufacturing partners for rackets, apparel, and specialty OEM lines. Contact us for early partnership discussions.",
+  recruitmentTitle: "Partner with VANTAGE SPORTS",
+  recruitmentDesc:
+    "We recruit ASEAN distributors, clubs, and sports shops — not end consumers. Factory partners supply production; VANTAGE SPORTS owns market development, lead tracking, and channel launch.",
+  recruitmentCtas: [
+    { label: "Apply as Distributor", path: "/distributor-program#apply" },
+    { label: "Request Factory Tour", path: "/contact" },
+    { label: "Download Partner Kit", path: "/download-center" },
+  ],
   partners: [
     {
       name: "INFIV",
@@ -617,7 +660,8 @@ export const contact = {
   title: "Contact",
   subtitle: "Reach the VANTAGE SPORTS partnership team via WhatsApp, Facebook, email, or the lead form below.",
   formTitle: "VANTAGE SPORTS Lead Form",
-  formNote: "Form is for inquiry collection only. CRM integration coming soon.",
+  formNote:
+    "Submissions are recorded in the VANTAGE lead system. Our partnership team responds within 2 business days.",
   fields: {
     company: "Company / Organization",
     name: "Contact Name",
@@ -637,4 +681,135 @@ export const contact = {
     "Product Catalog",
     "Other",
   ],
+};
+
+export const distributorCrm = {
+  seo: {
+    title: "Distributor CRM | VANTAGE SPORTS Partner Recruitment",
+    description:
+      "VANTAGE SPORTS distributor CRM — track partnership leads, distributor applications, and ASEAN recruitment pipeline in one place.",
+  },
+  title: "Distributor CRM",
+  subtitle: "Track distributor and partnership leads across Thailand, Malaysia, Philippines, and Vietnam.",
+  intro:
+    "The VANTAGE SPORTS recruitment platform captures every distributor inquiry, application, and contact lead. Use this dashboard to review pipeline status before full CRM backend sync.",
+  features: [
+    { title: "Lead Capture", desc: "All distributor, contact, and testing forms write to a unified lead store." },
+    { title: "Pipeline Status", desc: "New → Reviewing → Qualified → Closed workflow for recruitment follow-up." },
+    { title: "Export Ready", desc: "Export JSON for import into HubSpot, Salesforce, or custom CRM." },
+    { title: "Locale Tracking", desc: "Each lead records EN or ZH locale and source page for market attribution." },
+  ],
+  pipelineTitle: "Recruitment Pipeline",
+  pipelineSteps: ["New inquiry received", "Territory & volume review", "Sample shipment & pricing", "Partnership signed"],
+};
+
+export const clubTestingDatabase = {
+  seo: {
+    title: "Club Testing Database | VANTAGE SPORTS",
+    description:
+      "VANTAGE SPORTS club testing database — view shuttle testing applications from clubs, academies, and sports shops across ASEAN.",
+  },
+  title: "Club Testing Database",
+  subtitle: "Central registry of free G4, G6, and G7 shuttle testing applications.",
+  intro:
+    "Every club testing application submitted on the site is indexed here. Review organization type, market, and product interest before approving sample shipments.",
+  columns: {
+    organization: "Organization",
+    type: "Type",
+    country: "Country",
+    products: "Products",
+    members: "Scale",
+    submitted: "Submitted",
+  },
+  statsLabels: {
+    total: "Total Applications",
+    clubs: "Clubs & Academies",
+    shops: "Sports Shops",
+    distributors: "Distributors",
+  },
+};
+
+export const productComparison = {
+  seo: {
+    title: "G4 G6 G7 Product Comparison | VANTAGE SPORTS",
+    description:
+      "Compare G4 Tournament Grade, G6 Club Training, and G7 Economy Training shuttlecocks — specs, positioning, and recommended channels for ASEAN distributors.",
+  },
+  title: "Product Comparison",
+  subtitle: "Side-by-side G-series shuttlecock comparison for distributor sell-in and club procurement.",
+  intro:
+    "Use this matrix to position G4, G6, and G7 across tournament, club training, and economy segments. All SKUs manufactured by INFIV (OEM Partner), distributed by VANTAGE SPORTS.",
+  tableHeaders: {
+    attribute: "Attribute",
+    g4: "G4 — Tournament",
+    g6: "G6 — Club Training",
+    g7: "G7 — Economy",
+  },
+  rows: [
+    { label: "Grade", g4: "Tournament Grade", g6: "Club Training", g7: "Economy Training" },
+    { label: "Feather", g4: "Patent goose · full-round", g6: "Goose back · 0.15 mm", g7: "Golden duck · full-round" },
+    { label: "Primary Channel", g4: "Tournaments · premium shops", g6: "Clubs · academies", g7: "Shops · schools · new territories" },
+    { label: "Durability", g4: "Competition flight priority", g6: "Extreme session durability", g7: "High value per tube" },
+    { label: "MOQ Profile", g4: "Mid-high tier orders", g6: "High-volume club supply", g7: "Entry-friendly starter MOQ" },
+    { label: "ASEAN Fit", g4: "Humid markets · speed 77–79", g6: "Daily academy training", g7: "Price-sensitive growth markets" },
+  ],
+  ctaTitle: "Ready to order samples?",
+  ctaDesc: "Apply for free shuttle testing or submit a distributor application.",
+};
+
+export const downloadCenter = {
+  seo: {
+    title: "Download Center | VANTAGE SPORTS",
+    description:
+      "VANTAGE SPORTS download center — product catalog, G-series datasheets, distributor application forms, and partner marketing assets.",
+  },
+  title: "Download Center",
+  subtitle: "Catalogs, datasheets, and partner assets for distributors, clubs, and sports shops.",
+  intro:
+    "Request or download VANTAGE SPORTS partner materials. PDF catalog available on request — submit the contact form and we email export pricing tiers.",
+  categories: [
+    {
+      title: "Product Catalog",
+      desc: "Full G4 / G6 / G7 shuttlecock and equipment catalog with export tiers.",
+      type: "Catalog",
+      cta: "Request Catalog",
+      path: "/contact",
+    },
+    {
+      title: "G-Series Data Sheets",
+      desc: "Individual SKU specs, flight guides, and grade positioning.",
+      type: "Datasheet",
+      cta: "View Comparison",
+      path: "/product-comparison",
+    },
+    {
+      title: "Distributor Application Pack",
+      desc: "Application form, program overview, and market coverage summary.",
+      type: "Form",
+      cta: "Apply Now",
+      path: "/distributor-program#apply",
+    },
+    {
+      title: "Club Testing Application",
+      desc: "Free G4, G6, G7 sample tube request form and evaluation checklist.",
+      type: "Form",
+      cta: "Apply for Testing",
+      path: "/shuttle-testing#apply",
+    },
+    {
+      title: "Factory Partner Overview",
+      desc: "Manufacturing partner network, INFIV OEM capabilities, and QC standards.",
+      type: "Reference",
+      cta: "View Partners",
+      path: "/factory-partners",
+    },
+    {
+      title: "Media & Brand Assets",
+      desc: "Factory photos, product images, and VANTAGE SPORTS brand guidelines.",
+      type: "Assets",
+      cta: "Browse Media",
+      path: "/media-library",
+    },
+  ],
+  exportNote: "Need bulk asset access? Contact partners@vantage-sports.com with your distributor profile.",
 };

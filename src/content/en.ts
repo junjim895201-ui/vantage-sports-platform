@@ -78,6 +78,35 @@ export const home = {
   ],
   ctaTitle: "Ready to partner with VANTAGE SPORTS?",
   ctaDesc: "Tell us your country, channel type, and monthly volume. We respond within 2 business days.",
+  kpiTitle: "Platform at a Glance",
+  kpiStats: [
+    { value: "20+", label: "Years Industry Experience" },
+    { value: "7,000㎡", label: "Smart Factory Phase I" },
+    { value: "Global", label: "Market Coverage" },
+    { value: "OEM", label: "Manufacturing Available" },
+  ],
+  visualCardsTitle: "Factory-Backed Partnership",
+  visualCards: [
+    {
+      title: "OEM Ready",
+      desc: "Private-label shuttlecocks, tube design, and ASEAN packaging through vetted manufacturing partners.",
+    },
+    {
+      title: "Southeast Asia Distribution",
+      desc: "Distributor recruitment and channel launch across Thailand, Malaysia, Philippines, and Vietnam.",
+    },
+    {
+      title: "Factory Direct Supply",
+      desc: "G4, G6, and G7 partner series with export-grade QC — no China domestic franchise model.",
+    },
+  ],
+  trustTitle: "Built on Manufacturing Credibility",
+  trustSubtitle: "VANTAGE SPORTS manages market development. INFIV and selected partners supply production.",
+  trustItems: [
+    "20+ Years Industry Experience",
+    "Global Supply Network",
+    "OEM Manufacturing Partner",
+  ],
 };
 
 export const products = {
@@ -105,6 +134,12 @@ export const products = {
     { sku: "G6", label: "Club Training", desc: "0.15 mm goose · extreme durability" },
     { sku: "G7", label: "Economy Training", desc: "Golden duck · best value" },
   ],
+  visualTaglines: {
+    G4: "Tournament Grade Goose Feather",
+    G6: "High Durability Goose Feather",
+    G7: "Training Grade Precision Shuttle",
+  },
+  applicationLabel: "Application",
 };
 
 export const oem = {
@@ -152,6 +187,28 @@ export const oem = {
       desc: "Club or academy logo on shuttles and team kits — recurring supply programs with factory QC backing.",
     },
   ],
+  visualSections: {
+    capacity: {
+      title: "Manufacturing Capacity",
+      desc: "Selected manufacturing partners operate intelligent production campuses with scalable shuttle output for ASEAN export programs.",
+    },
+    quality: {
+      title: "Quality Control",
+      desc: "49-step QC, patent-processed feathers, and technology awards underpin every partner product series distributed by VANTAGE SPORTS.",
+    },
+    services: {
+      title: "OEM Services",
+      desc: "Tube design, speed grades, multilingual packaging, and sampling managed by VANTAGE SPORTS through vetted factory partners.",
+    },
+    privateLabel: {
+      title: "Private Label",
+      desc: "Launch your own shuttle brand with MOQ-friendly private label programs — backed by INFIV as OEM manufacturing partner.",
+    },
+    dealerSupport: {
+      title: "Dealer Support",
+      desc: "Export documentation, landed-cost planning, and distributor onboarding for Southeast Asia channel partners.",
+    },
+  },
 };
 
 export const distributor = {
@@ -206,6 +263,9 @@ export const distributor = {
     "Not sure yet",
   ],
   productOptions: ["G4 Tournament Grade", "G6 Club Training", "G7 Economy Training", "Rackets", "Apparel & Bags", "OEM / Private Label"],
+  visualGalleryTitle: "Factory-Backed Distribution Network",
+  visualGalleryDesc:
+    "See the product ladder, manufacturing campus, and global export footprint behind every VANTAGE SPORTS distributor partnership.",
 };
 
 export const testing = {

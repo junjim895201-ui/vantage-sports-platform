@@ -1,13 +1,22 @@
 import Seo from "../components/seo/Seo";
 import ClubTestingCta from "../components/ui/ClubTestingCta";
 import DownloadCatalogCta from "../components/ui/DownloadCatalogCta";
+import KpiStatGrid from "../components/ui/KpiStatGrid";
 import LocalizedLink from "../components/ui/LocalizedLink";
 import MarketsSection from "../components/ui/MarketsSection";
+import ResponsiveImage from "../components/ui/ResponsiveImage";
+import { phase6aMedia } from "../lib/media";
 import { useI18n } from "../i18n";
+
+const visualCardImages = [
+  phase6aMedia.factory.quality,
+  phase6aMedia.network,
+  phase6aMedia.factory.exterior,
+];
 
 export default function HomePage() {
   const { content } = useI18n();
-  const { home, common, productComparison, downloadCenter, distributorCrm } = content;
+  const { home, common, productComparison, downloadCenter } = content;
 
   return (
     <>
@@ -18,10 +27,19 @@ export default function HomePage() {
         keywords={common.seoKeywords.home}
       />
 
-      <section className="bg-navy text-white">
-        <div className="container-main py-10 md:py-16">
+      <section className="relative overflow-hidden bg-navy text-white">
+        <ResponsiveImage
+          src={phase6aMedia.hero}
+          alt="Badminton athletes in competitive play"
+          wrapperClassName="absolute inset-0 h-full w-full"
+          className="h-full w-full object-cover opacity-40"
+          loading="eager"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/50" />
+        <div className="container-main relative py-12 md:py-20">
           <p className="text-xs font-bold uppercase tracking-widest text-gold">{home.eyebrow}</p>
-          <h1 className="mt-3 text-3xl font-bold leading-tight md:text-5xl">{home.title}</h1>
+          <h1 className="mt-3 max-w-3xl text-3xl font-bold leading-tight md:text-5xl">{home.title}</h1>
           <p className="mt-4 max-w-2xl text-sm text-slate-300 md:text-base">{home.subtitle}</p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <LocalizedLink to="/products" className="btn btn-primary w-full sm:w-auto">
@@ -34,6 +52,59 @@ export default function HomePage() {
               {home.ctaTesting}
             </LocalizedLink>
           </div>
+        </div>
+      </section>
+
+      <section className="section bg-slate-50">
+        <div className="container-main">
+          <KpiStatGrid title={home.kpiTitle} items={home.kpiStats} />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container-main">
+          <h2 className="text-2xl font-bold text-navy">{home.visualCardsTitle}</h2>
+          <div className="mt-5 grid gap-4 md:grid-cols-3">
+            {home.visualCards.map((card, i) => (
+              <div key={card.title} className="card overflow-hidden p-0">
+                <ResponsiveImage
+                  src={visualCardImages[i]}
+                  alt={card.title}
+                  wrapperClassName="aspect-[16/10] w-full"
+                  loading="lazy"
+                />
+                <div className="p-5">
+                  <h3 className="font-semibold text-navy">{card.title}</h3>
+                  <p className="mt-2 text-sm text-slate-500">{card.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section bg-slate-50">
+        <div className="container-main grid items-center gap-8 lg:grid-cols-2">
+          <div>
+            <h2 className="text-2xl font-bold text-navy">{home.trustTitle}</h2>
+            <p className="mt-2 text-sm text-slate-600">{home.trustSubtitle}</p>
+            <ul className="mt-5 space-y-3">
+              {home.trustItems.map((item) => (
+                <li key={item} className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-navy">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gold text-xs font-bold text-navy">
+                    ✓
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <ResponsiveImage
+            src={phase6aMedia.factory.masterplan}
+            alt="Manufacturing partner campus masterplan"
+            wrapperClassName="aspect-[4/3] w-full rounded-xl border border-slate-200 shadow-sm"
+            loading="lazy"
+          />
         </div>
       </section>
 
@@ -52,23 +123,31 @@ export default function HomePage() {
       </section>
 
       <section className="section">
-        <div className="container-main">
-          <h2 className="text-2xl font-bold text-navy">{home.audiencesTitle}</h2>
-          <div className="mt-5 grid gap-4 sm:grid-cols-2">
-            {home.audiences.map((a) => (
-              <div key={a.title} className="card">
-                <h3 className="font-semibold text-navy">{a.title}</h3>
-                <p className="mt-2 text-sm text-slate-500">{a.desc}</p>
-              </div>
-            ))}
+        <div className="container-main grid items-center gap-8 lg:grid-cols-2">
+          <ResponsiveImage
+            src={phase6aMedia.court.lifestyle}
+            alt="Badminton club lifestyle scene"
+            wrapperClassName="aspect-[4/3] w-full rounded-xl border border-slate-200"
+            loading="lazy"
+          />
+          <div>
+            <h2 className="text-2xl font-bold text-navy">{home.audiencesTitle}</h2>
+            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+              {home.audiences.map((a) => (
+                <div key={a.title} className="card">
+                  <h3 className="font-semibold text-navy">{a.title}</h3>
+                  <p className="mt-2 text-sm text-slate-500">{a.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       <section className="section bg-slate-50">
         <div className="container-main">
-          <h2 className="text-2xl font-bold text-navy">{distributorCrm.pipelineTitle}</h2>
-          <p className="mt-2 max-w-2xl text-sm text-slate-600">{distributorCrm.intro}</p>
+          <h2 className="text-2xl font-bold text-navy">{downloadCenter.title}</h2>
+          <p className="mt-2 max-w-2xl text-sm text-slate-600">{downloadCenter.subtitle}</p>
           <div className="mt-5 grid gap-4 sm:grid-cols-3">
             <LocalizedLink to="/product-comparison" className="card block hover:border-gold/40">
               <h3 className="font-semibold text-navy">{productComparison.title}</h3>

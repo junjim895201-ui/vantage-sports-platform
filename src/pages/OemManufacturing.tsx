@@ -1,11 +1,24 @@
 import Seo from "../components/seo/Seo";
 import LocalizedLink from "../components/ui/LocalizedLink";
-import PageHero from "../components/ui/PageHero";
+import ResponsiveImage from "../components/ui/ResponsiveImage";
+import { phase6aMedia } from "../lib/media";
 import { useI18n } from "../i18n";
+
+const oemVisualImages = {
+  capacity: phase6aMedia.factory.masterplan,
+  quality: phase6aMedia.factory.quality,
+  services: phase6aMedia.factory.timeline,
+  privateLabel: phase6aMedia.products.G4.poster,
+  dealerSupport: phase6aMedia.network,
+};
 
 export default function OemManufacturingPage() {
   const { content } = useI18n();
   const { oem, common } = content;
+  const sections = Object.entries(oem.visualSections) as [
+    keyof typeof oem.visualSections,
+    (typeof oem.visualSections)[keyof typeof oem.visualSections],
+  ][];
 
   return (
     <>
@@ -15,7 +28,20 @@ export default function OemManufacturingPage() {
         path="/oem-manufacturing"
         keywords={common.seoKeywords.oem}
       />
-      <PageHero title={oem.title} subtitle={oem.subtitle} />
+      <section className="relative overflow-hidden bg-navy text-white">
+        <ResponsiveImage
+          src={phase6aMedia.factory.exterior}
+          alt="Manufacturing partner factory exterior"
+          wrapperClassName="absolute inset-0 h-full w-full"
+          className="h-full w-full object-cover opacity-35"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/85 to-navy/60" />
+        <div className="container-main relative py-10 md:py-14">
+          <h1 className="text-3xl font-bold md:text-4xl">{oem.title}</h1>
+          <p className="mt-3 max-w-2xl text-sm text-slate-300 md:text-base">{oem.subtitle}</p>
+        </div>
+      </section>
 
       <section className="section">
         <div className="container-main">
@@ -26,6 +52,28 @@ export default function OemManufacturingPage() {
       </section>
 
       <section className="section bg-slate-50">
+        <div className="container-main space-y-8">
+          {sections.map(([key, section], index) => (
+            <div
+              key={key}
+              className={`grid items-center gap-6 lg:grid-cols-2 ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
+            >
+              <ResponsiveImage
+                src={oemVisualImages[key]}
+                alt={section.title}
+                wrapperClassName={`aspect-[16/10] w-full rounded-xl border border-slate-200 ${index % 2 === 1 ? "lg:order-2" : ""}`}
+                loading="lazy"
+              />
+              <div className={`card ${index % 2 === 1 ? "lg:order-1" : ""}`}>
+                <h2 className="text-xl font-bold text-navy">{section.title}</h2>
+                <p className="mt-3 text-sm text-slate-600">{section.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container-main">
           <h2 className="text-xl font-bold text-navy">{common.oemBrandSolutions}</h2>
           <p className="mt-2 text-sm text-slate-500">{common.oemBrandSolutionsDesc}</p>
@@ -40,7 +88,7 @@ export default function OemManufacturingPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section bg-slate-50">
         <div className="container-main">
           <h2 className="text-xl font-bold text-navy">{common.oemScope}</h2>
           <div className="mt-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
@@ -54,7 +102,7 @@ export default function OemManufacturingPage() {
         </div>
       </section>
 
-      <section className="section bg-slate-50">
+      <section className="section">
         <div className="container-main">
           <h2 className="text-xl font-bold text-navy">{common.oemWorkflow}</h2>
           <ol className="mt-4 space-y-3">
@@ -70,7 +118,7 @@ export default function OemManufacturingPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section bg-slate-50">
         <div className="container-main">
           <h2 className="text-xl font-bold text-navy">{common.moqGuidance}</h2>
           <div className="card mt-4 max-w-lg">

@@ -2,14 +2,16 @@ import Seo from "../components/seo/Seo";
 import ClubTestingCta from "../components/ui/ClubTestingCta";
 import DownloadCatalogCta from "../components/ui/DownloadCatalogCta";
 import LocalizedLink from "../components/ui/LocalizedLink";
-import PageHero from "../components/ui/PageHero";
+import ProductVisualCard from "../components/ui/ProductVisualCard";
+import ResponsiveImage from "../components/ui/ResponsiveImage";
+import { phase6aMedia } from "../lib/media";
 import { useI18n } from "../i18n";
 
-const gradeClass: Record<string, string> = {
-  tournament: "grade-tournament",
-  club: "grade-club",
-  economy: "grade-economy",
-};
+const productMediaMap = {
+  G4: phase6aMedia.products.G4,
+  G6: phase6aMedia.products.G6,
+  G7: phase6aMedia.products.G7,
+} as const;
 
 export default function ProductsPage() {
   const { content, products } = useI18n();
@@ -24,7 +26,21 @@ export default function ProductsPage() {
         path="/products"
         keywords={common.seoKeywords.products}
       />
-      <PageHero title={copy.title} subtitle={copy.subtitle} eyebrow={copy.partnerNote} />
+      <section className="relative overflow-hidden bg-navy text-white">
+        <ResponsiveImage
+          src={phase6aMedia.products.floating}
+          alt="Shuttlecock product hero"
+          wrapperClassName="absolute inset-0 h-full w-full"
+          className="h-full w-full object-cover opacity-30"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-navy/80" />
+        <div className="container-main relative py-10 md:py-14">
+          <p className="text-xs font-bold uppercase tracking-widest text-gold">{copy.partnerNote}</p>
+          <h1 className="mt-2 text-3xl font-bold md:text-4xl">{copy.title}</h1>
+          <p className="mt-3 max-w-2xl text-sm text-slate-300 md:text-base">{copy.subtitle}</p>
+        </div>
+      </section>
 
       <section className="section">
         <div className="container-main">
@@ -42,31 +58,25 @@ export default function ProductsPage() {
               </div>
             ))}
           </div>
-          <div className="mt-6 grid gap-4 lg:grid-cols-3">
-            {shuttleProducts.map((p) => (
-              <article key={p.sku} className="card flex flex-col">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className={`grade-badge ${gradeClass[p.grade]}`}>{p.gradeLabel}</span>
-                  <span className="text-xs font-bold uppercase tracking-wider text-gold">{p.sku}</span>
-                </div>
-                <h3 className="mt-2 text-xl font-bold text-navy">{p.name}</h3>
-                <p className="text-sm font-medium text-navy-light">{p.series}</p>
-                <p className="mt-1 text-xs text-slate-400">{p.manufacturingPartner}</p>
-                <p className="mt-2 text-sm text-slate-500">{p.positioning}</p>
-                <ul className="mt-3 flex-1 space-y-1">
-                  {p.highlights.map((h) => (
-                    <li key={h} className="flex gap-2 text-sm text-slate-600">
-                      <span className="shrink-0 font-bold text-navy-light">✓</span>
-                      {h}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-4 border-t border-slate-100 pt-3">
-                  <p className="text-xs font-semibold text-slate-500">{common.bestFor}</p>
-                  <p className="mt-1 text-xs text-slate-600">{p.recommendedFor.join(" · ")}</p>
-                </div>
-              </article>
-            ))}
+          <div className="mt-6 grid gap-6 lg:grid-cols-3">
+            {shuttleProducts.map((p) => {
+              const media = productMediaMap[p.sku as keyof typeof productMediaMap];
+              const tagline = copy.visualTaglines[p.sku as keyof typeof copy.visualTaglines];
+              return (
+                <ProductVisualCard
+                  key={p.sku}
+                  sku={p.sku}
+                  gradeLabel={p.gradeLabel}
+                  tagline={tagline}
+                  positioning={p.positioning}
+                  application={p.recommendedFor.join(" · ")}
+                  highlights={p.highlights}
+                  imageSrc={media.tube}
+                  craftSrc={media.craft}
+                  manufacturingPartner={p.manufacturingPartner}
+                />
+              );
+            })}
           </div>
         </div>
       </section>
@@ -95,25 +105,33 @@ export default function ProductsPage() {
       </section>
 
       <section className="section">
-        <div className="container-main">
-          <h2 className="text-xl font-bold text-navy">{common.exportStandards}</h2>
-          <ul className="mt-4 space-y-2">
-            {copy.specs.map((s) => (
-              <li key={s} className="flex gap-2 text-sm">
-                <span className="font-bold text-navy-light">✓</span>
-                {s}
-              </li>
-            ))}
-          </ul>
-          <p className="mt-4 text-xs text-slate-500">{copy.note}</p>
-          <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-            <LocalizedLink to="/shuttle-testing" className="btn btn-secondary w-full sm:w-auto">
-              {common.applyFreeShuttleTesting}
-            </LocalizedLink>
-            <LocalizedLink to="/distributor-program" className="btn btn-primary w-full sm:w-auto">
-              {common.distributorApplication}
-            </LocalizedLink>
+        <div className="container-main grid items-start gap-8 lg:grid-cols-2">
+          <div>
+            <h2 className="text-xl font-bold text-navy">{common.exportStandards}</h2>
+            <ul className="mt-4 space-y-2">
+              {copy.specs.map((s) => (
+                <li key={s} className="flex gap-2 text-sm">
+                  <span className="font-bold text-navy-light">✓</span>
+                  {s}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-xs text-slate-500">{copy.note}</p>
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+              <LocalizedLink to="/shuttle-testing" className="btn btn-secondary w-full sm:w-auto">
+                {common.applyFreeShuttleTesting}
+              </LocalizedLink>
+              <LocalizedLink to="/distributor-program" className="btn btn-primary w-full sm:w-auto">
+                {common.distributorApplication}
+              </LocalizedLink>
+            </div>
           </div>
+          <ResponsiveImage
+            src={phase6aMedia.factory.quality}
+            alt="Manufacturing partner quality and technology credentials"
+            wrapperClassName="aspect-[4/3] w-full rounded-xl border border-slate-200"
+            loading="lazy"
+          />
         </div>
       </section>
 

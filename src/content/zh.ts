@@ -79,6 +79,31 @@ export const home = {
   ],
   ctaTitle: "准备与 VANTAGE SPORTS 合作？",
   ctaDesc: "告知您的国家、渠道类型及月采购量。我们将在 2 个工作日内回复。",
+  kpiTitle: "平台一览",
+  kpiStats: [
+    { value: "20+", label: "年行业经验" },
+    { value: "7,000㎡", label: "智能工厂一期" },
+    { value: "全球", label: "市场覆盖" },
+    { value: "OEM", label: "制造服务可用" },
+  ],
+  visualCardsTitle: "工厂实力背书合作",
+  visualCards: [
+    {
+      title: "OEM 就绪",
+      desc: "通过认证制造伙伴提供贴牌羽毛球、筒身设计及东盟包装服务。",
+    },
+    {
+      title: "东南亚分销",
+      desc: "在泰国、马来西亚、菲律宾和越南开展分销商招募与渠道上市。",
+    },
+    {
+      title: "工厂直供",
+      desc: "G4、G6、G7 合作系列，出口级品控 — 非中国国内加盟模式。",
+    },
+  ],
+  trustTitle: "制造实力建立信任",
+  trustSubtitle: "VANTAGE SPORTS 负责市场开发。INFIV 及精选伙伴负责生产供应。",
+  trustItems: ["20+ 年行业经验", "全球供应网络", "OEM 制造伙伴"],
 };
 
 export const products = {
@@ -106,6 +131,12 @@ export const products = {
     { sku: "G6", label: "俱乐部训练", desc: "0.15mm 鹅毛 · 极高耐用" },
     { sku: "G7", label: "经济训练", desc: "黄金鸭毛 · 高性价比" },
   ],
+  visualTaglines: {
+    G4: "赛事级鹅毛羽毛球",
+    G6: "高耐用鹅毛羽毛球",
+    G7: "训练级精准羽毛球",
+  },
+  applicationLabel: "适用场景",
 };
 
 export const oem = {
@@ -153,6 +184,28 @@ export const oem = {
       desc: "俱乐部或学院标识印在羽毛球及队服上 — 稳定供应计划配合工厂品控。",
     },
   ],
+  visualSections: {
+    capacity: {
+      title: "制造产能",
+      desc: "精选制造伙伴运营智能化生产基地，为东盟出口项目提供可扩展羽毛球产能。",
+    },
+    quality: {
+      title: "品质管控",
+      desc: "49 道品控、专利羽毛工艺及技术认证，支撑 VANTAGE SPORTS 分销的每一款合作产品。",
+    },
+    services: {
+      title: "OEM 服务",
+      desc: "筒身设计、球速分级、多语言包装及打样，由 VANTAGE SPORTS 通过认证工厂伙伴统筹。",
+    },
+    privateLabel: {
+      title: "贴牌制造",
+      desc: "以友好起订量推出自有羽毛球品牌 — 由 INFIV 作为 OEM 制造伙伴提供产能支持。",
+    },
+    dealerSupport: {
+      title: "经销商支持",
+      desc: "出口单证、到岸成本规划及东南亚渠道伙伴入驻支持。",
+    },
+  },
 };
 
 export const distributor = {
@@ -226,6 +279,9 @@ export const distributor = {
     "服装与球包",
     "OEM / 贴牌",
   ],
+  visualGalleryTitle: "工厂背书的分销网络",
+  visualGalleryDesc:
+    "了解 VANTAGE SPORTS 分销商合作背后的产品阶梯、制造园区及全球出口布局。",
 };
 
 export const testing = {

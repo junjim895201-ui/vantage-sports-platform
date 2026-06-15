@@ -5,11 +5,15 @@ export default {
     extend: {
       colors: {
         navy: {
-          DEFAULT: "#0b1f3a",
-          light: "#1e4d8c",
+          DEFAULT: "#0a1628",
+          light: "#1a3a5c",
+          dark: "#060e1a",
         },
-        gold: "#c9a227",
-        accent: "#e85d04",
+        gold: {
+          DEFAULT: "#c9a227",
+          light: "#e8c547",
+        },
+        accent: "#c9a227",
       },
       fontFamily: {
         sans: [

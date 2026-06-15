@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://badminton-sea.vercel.app/</loc></url>
-  <url><loc>https://badminton-sea.vercel.app/products</loc></url>
-  <url><loc>https://badminton-sea.vercel.app/oem-manufacturing</loc></url>
-  <url><loc>https://badminton-sea.vercel.app/distributor-program</loc></url>
-  <url><loc>https://badminton-sea.vercel.app/shuttle-testing</loc></url>
-  <url><loc>https://badminton-sea.vercel.app/market-coverage</loc></url>
-  <url><loc>https://badminton-sea.vercel.app/about</loc></url>
-  <url><loc>https://badminton-sea.vercel.app/contact</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://vantage-sports.vercel.app/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vantage-sports.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://vantage-sports.vercel.app/zh"/>
+  </url>
+  <url>
+    <loc>https://vantage-sports.vercel.app/zh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vantage-sports.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://vantage-sports.vercel.app/zh"/>
+  </url>
+  <url><loc>https://vantage-sports.vercel.app/products</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/zh/products</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/oem-manufacturing</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/zh/oem-manufacturing</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/distributor-program</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/zh/distributor-program</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/shuttle-testing</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/zh/shuttle-testing</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/about-factory</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/zh/about-factory</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/contact</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/zh/contact</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/market-coverage</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/zh/market-coverage</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/factory-partners</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/zh/factory-partners</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/distributor-resources</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/zh/distributor-resources</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/media-library</loc></url>
+  <url><loc>https://vantage-sports.vercel.app/zh/media-library</loc></url>
 </urlset>

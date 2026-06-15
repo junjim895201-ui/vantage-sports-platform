@@ -1,43 +1,55 @@
-# Badminton SEA
+# VANTAGE SPORTS
 
-Southeast Asia B2B badminton partnership platform — helping Chinese factories (INFIV, VENSON, OEM partners) develop distributors, clubs, and OEM clients in Thailand, Malaysia, Philippines, and Vietnam.
+**Southeast Asia Sports Distribution & OEM Platform**
+
+Badminton shuttlecock distribution, OEM private label, distributor recruitment, and club testing across Thailand, Malaysia, Philippines, and Vietnam.
+
+> Primary brand: **VANTAGE SPORTS** · Manufacturing partner: **INFIV** (OEM Partner)
 
 ## Stack
 
-- **Vite** + **React** + **TypeScript**
-- **Tailwind CSS**
-- **ESLint** + **Prettier**
-- **react-router-dom**
+- Vite 8 + React 19 + TypeScript + Tailwind CSS 3
+- ESLint + Prettier
+- Vercel-ready SPA (`vercel.json`)
 
-## Scripts
-
-```bash
-npm install
-npm run dev          # local dev server
-npm run build        # production build → dist/
-npm run lint         # ESLint
-npm run format       # Prettier write
-npm run format:check # Prettier check
-npm run preview      # preview production build
-```
-
-## Pages
+## Pages (v0.4.0 — Market Development)
 
 | Route | Page |
 |-------|------|
 | `/` | Home |
-| `/products` | Products |
+| `/products` | Badminton Shuttlecock Series |
+| `/market-coverage` | Market Coverage (TH, MY, PH, VN) |
+| `/factory-partners` | Factory Partners (INFIV + Future OEM) |
 | `/oem-manufacturing` | OEM Manufacturing |
-| `/distributor-program` | Distributor Program |
-| `/shuttle-testing` | Free Shuttle Testing |
-| `/market-coverage` | Market Coverage |
-| `/about` | About Us |
-| `/contact` | Contact |
+| `/distributor-program` | Distributor Program + Lead Form |
+| `/distributor-resources` | Distributor Resource Center |
+| `/shuttle-testing` | Free Shuttle Testing + Application Form |
+| `/media-library` | Media Library (factory images & video) |
+| `/contact` | Contact + VANTAGE SPORTS Lead Form |
 
-## Configuration
+**Redirects:** `/about-factory`, `/about` → `/factory-partners` · `/oem-service` → `/oem-manufacturing`
 
-Edit `src/content/en.ts` for copy and contact details.
+## Brand Assets
 
-## Deploy
+```
+brand-assets/          # Source masters (logos, colors, product shots)
+public/media/          # Web-served factory & product media
+```
 
-Vercel-ready via `vercel.json` SPA rewrites. Push to Git and import in Vercel, or run `npx vercel --prod`.
+See [brand-assets/README.md](./brand-assets/README.md).
+
+## Commands
+
+```bash
+npm install
+npm run dev
+npm run build
+npm run lint
+```
+
+## Docs
+
+- [PROJECT_SNAPSHOT_VANTAGE_PHASE3.md](./PROJECT_SNAPSHOT_VANTAGE_PHASE3.md)
+- [REBRANDING_REPORT_VANTAGE_SPORTS.md](./REBRANDING_REPORT_VANTAGE_SPORTS.md)
+- [PRODUCT_DATABASE.md](./PRODUCT_DATABASE.md)
+- [MARKETING_COPY_EN.md](./MARKETING_COPY_EN.md)

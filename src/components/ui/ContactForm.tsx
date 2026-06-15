@@ -1,8 +1,10 @@
 import type { FormEvent } from "react";
 import { useState } from "react";
-import { contact } from "../../content/en";
+import { useI18n } from "../../i18n";
 
 export default function ContactForm() {
+  const { content } = useI18n();
+  const { contact, common } = content;
   const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(e: FormEvent) {
@@ -12,10 +14,7 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="card border-emerald-200 bg-emerald-50 text-emerald-800">
-        Thank you! Your inquiry has been recorded locally. CRM integration coming soon — please also
-        contact us via WhatsApp or Facebook for faster response.
-      </div>
+      <div className="card border-emerald-200 bg-emerald-50 text-emerald-800">{common.formSuccessContact}</div>
     );
   }
 
@@ -26,27 +25,27 @@ export default function ContactForm() {
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block text-sm font-semibold text-slate-500">
           {f.company}
-          <input name="company" required className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-base" />
+          <input name="company" required className="form-input mt-1 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-base" />
         </label>
         <label className="block text-sm font-semibold text-slate-500">
           {f.name}
-          <input name="name" required className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-base" />
+          <input name="name" required className="form-input mt-1 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-base" />
         </label>
         <label className="block text-sm font-semibold text-slate-500">
           {f.email}
-          <input name="email" type="email" required className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-base" />
+          <input name="email" type="email" required className="form-input mt-1 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-base" />
         </label>
         <label className="block text-sm font-semibold text-slate-500">
           {f.phone}
-          <input name="phone" type="tel" className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-base" />
+          <input name="phone" type="tel" className="form-input mt-1 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-base" />
         </label>
         <label className="block text-sm font-semibold text-slate-500">
           {f.country}
-          <input name="country" required className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-base" />
+          <input name="country" required className="form-input mt-1 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-base" />
         </label>
         <label className="block text-sm font-semibold text-slate-500">
           {f.interest}
-          <select name="interest" defaultValue={contact.interests[0]} className="mt-1 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-base">
+          <select name="interest" defaultValue={contact.interests[0]} className="form-input mt-1 w-full rounded-lg border border-slate-200 px-3 py-2.5 text-base">
             {contact.interests.map((opt) => (
               <option key={opt} value={opt}>
                 {opt}

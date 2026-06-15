@@ -1,11 +1,22 @@
-import { Link } from "react-router-dom";
 import Seo from "../components/seo/Seo";
-import { home } from "../content/en";
+import ClubTestingCta from "../components/ui/ClubTestingCta";
+import DownloadCatalogCta from "../components/ui/DownloadCatalogCta";
+import LocalizedLink from "../components/ui/LocalizedLink";
+import MarketsSection from "../components/ui/MarketsSection";
+import { useI18n } from "../i18n";
 
 export default function HomePage() {
+  const { content } = useI18n();
+  const { home, common } = content;
+
   return (
     <>
-      <Seo title={home.seo.title} description={home.seo.description} path="/" />
+      <Seo
+        title={home.seo.title}
+        description={home.seo.description}
+        path="/"
+        keywords={common.seoKeywords.home}
+      />
 
       <section className="bg-navy text-white">
         <div className="container-main py-10 md:py-16">
@@ -13,15 +24,15 @@ export default function HomePage() {
           <h1 className="mt-3 text-3xl font-bold leading-tight md:text-5xl">{home.title}</h1>
           <p className="mt-4 max-w-2xl text-sm text-slate-300 md:text-base">{home.subtitle}</p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <Link to="/oem-manufacturing" className="btn btn-primary w-full sm:w-auto">
-              {home.ctaOem}
-            </Link>
-            <Link to="/distributor-program" className="btn btn-secondary w-full sm:w-auto">
+            <LocalizedLink to="/products" className="btn btn-primary w-full sm:w-auto">
+              {home.ctaProducts}
+            </LocalizedLink>
+            <LocalizedLink to="/distributor-program" className="btn btn-secondary w-full sm:w-auto">
               {home.ctaDistributor}
-            </Link>
-            <Link to="/shuttle-testing" className="btn btn-outline-light w-full sm:w-auto">
+            </LocalizedLink>
+            <LocalizedLink to="/shuttle-testing" className="btn btn-outline-light w-full sm:w-auto">
               {home.ctaTesting}
-            </Link>
+            </LocalizedLink>
           </div>
         </div>
       </section>
@@ -40,44 +51,42 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section bg-slate-50">
-        <div className="container-main">
-          <h2 className="text-2xl font-bold text-navy">{home.programsTitle}</h2>
-          <div className="mt-5 grid gap-4 md:grid-cols-3">
-            {home.programs.map((p) => (
-              <div key={p.title} className="card">
-                <h3 className="font-semibold text-navy">{p.title}</h3>
-                <p className="mt-2 text-sm text-slate-500">{p.desc}</p>
-                <Link to={p.path} className="btn btn-secondary mt-4 px-4 py-2 text-xs">
-                  Learn more
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="section">
         <div className="container-main">
-          <h2 className="text-2xl font-bold text-navy">{home.factoriesTitle}</h2>
-          <div className="mt-5 grid gap-4 md:grid-cols-3">
-            {home.factories.map((f) => (
-              <div key={f.name} className="card border-gold/30">
-                <h3 className="text-lg font-bold text-navy">{f.name}</h3>
-                <p className="mt-2 text-sm text-slate-500">{f.desc}</p>
+          <h2 className="text-2xl font-bold text-navy">{home.audiencesTitle}</h2>
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            {home.audiences.map((a) => (
+              <div key={a.title} className="card">
+                <h3 className="font-semibold text-navy">{a.title}</h3>
+                <p className="mt-2 text-sm text-slate-500">{a.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-navy py-12 text-center text-white">
+      <MarketsSection />
+      <section className="container-main -mt-6 pb-10">
+        <LocalizedLink to="/market-coverage" className="btn btn-secondary w-full sm:w-auto">
+          {common.viewMarketCoverage}
+        </LocalizedLink>
+      </section>
+
+      <ClubTestingCta />
+      <DownloadCatalogCta variant="band" />
+
+      <section className="bg-navy py-10 text-center text-white md:py-12">
         <div className="container-main">
           <h2 className="text-2xl font-bold">{home.ctaTitle}</h2>
           <p className="mx-auto mt-3 max-w-lg text-sm text-slate-300">{home.ctaDesc}</p>
-          <Link to="/contact" className="btn btn-primary mt-5">
-            Contact Us
-          </Link>
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:justify-center">
+            <LocalizedLink to="/distributor-program#apply" className="btn btn-primary w-full sm:w-auto">
+              {common.distributorApplication}
+            </LocalizedLink>
+            <LocalizedLink to="/contact" className="btn btn-outline-light w-full sm:w-auto">
+              {common.contactUs}
+            </LocalizedLink>
+          </div>
         </div>
       </section>
     </>

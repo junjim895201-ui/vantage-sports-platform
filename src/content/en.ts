@@ -1,5 +1,6 @@
 import { factoryCapabilities } from "./products";
 
+// TODO: Replace with official production contact information before public launch
 export const site = {
   name: "VANTAGE SPORTS",
   brand: "VANTAGE SPORTS",
@@ -7,10 +8,11 @@ export const site = {
   description:
     "VANTAGE SPORTS helps distributors, badminton clubs, sports shops, and OEM buyers access factory-direct shuttlecocks and private-label equipment across Thailand, Malaysia, Philippines, and Vietnam.",
   url: "https://vantage-sports.vercel.app",
-  email: "partners@vantage-sports.com",
-  whatsapp: "66812345678",
-  whatsappDisplay: "+66 81 234 5678",
-  facebook: "https://www.facebook.com/vantage.sports.sea",
+  email: "contact@vantagesports.com",
+  whatsapp: "60123456789",
+  whatsappDisplay: "+60 12-345 6789",
+  facebook: "https://facebook.com/vantagesports",
+  line: "https://line.me/R/ti/p/@vantagesports",
   markets: ["Thailand", "Malaysia", "Philippines", "Vietnam"],
   audiences: ["Distributors", "Badminton Clubs", "Sports Shops", "OEM Buyers"],
   coreBusiness: [
@@ -309,9 +311,11 @@ export const common = {
   chatWhatsapp: "Chat on WhatsApp",
   contactWhatsapp: "Contact via WhatsApp",
   contactFacebook: "Contact via Facebook",
+  contactLine: "Contact via LINE",
   contactEmail: "Contact via Email",
   whatsapp: "WhatsApp",
   facebook: "Facebook",
+  line: "LINE",
   email: "Email",
   mediaComingSoon: "Media coming soon",
   requestMediaAccess: "Request Media Access",
@@ -655,10 +659,11 @@ export const contact = {
   seo: {
     title: "Contact | VANTAGE SPORTS",
     description:
-      "Contact VANTAGE SPORTS for distributor, club, sports shop, and OEM inquiries. WhatsApp, Facebook, email, or lead form.",
+      "Contact VANTAGE SPORTS for distributor, club, sports shop, and OEM inquiries. WhatsApp, Facebook, LINE, email, or lead form.",
   },
   title: "Contact",
-  subtitle: "Reach the VANTAGE SPORTS partnership team via WhatsApp, Facebook, email, or the lead form below.",
+  subtitle:
+    "Reach the VANTAGE SPORTS partnership team via WhatsApp, Facebook, LINE, email, or the lead form below.",
   formTitle: "VANTAGE SPORTS Lead Form",
   formNote:
     "Submissions are recorded in the VANTAGE lead system. Our partnership team responds within 2 business days.",
@@ -811,5 +816,5 @@ export const downloadCenter = {
       path: "/media-library",
     },
   ],
-  exportNote: "Need bulk asset access? Contact partners@vantage-sports.com with your distributor profile.",
+  exportNote: "Need bulk asset access? Contact contact@vantagesports.com with your distributor profile.",
 };

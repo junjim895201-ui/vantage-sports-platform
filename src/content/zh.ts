@@ -1,6 +1,7 @@
 import type { ShuttleProduct } from "./products";
 import { factoryCapabilities as enFactoryCapabilities } from "./products";
 
+// TODO: Replace with official production contact information before public launch
 export const site = {
   name: "VANTAGE SPORTS",
   brand: "VANTAGE SPORTS",
@@ -8,10 +9,11 @@ export const site = {
   description:
     "VANTAGE SPORTS 帮助分销商、羽毛球俱乐部、体育用品店和 OEM 买家，在泰国、马来西亚、菲律宾和越南获取工厂直供羽毛球及贴牌装备。",
   url: "https://vantage-sports.vercel.app",
-  email: "partners@vantage-sports.com",
-  whatsapp: "66812345678",
-  whatsappDisplay: "+66 81 234 5678",
-  facebook: "https://www.facebook.com/vantage.sports.sea",
+  email: "contact@vantagesports.com",
+  whatsapp: "60123456789",
+  whatsappDisplay: "+60 12-345 6789",
+  facebook: "https://facebook.com/vantagesports",
+  line: "https://line.me/R/ti/p/@vantagesports",
   markets: ["泰国", "马来西亚", "菲律宾", "越南"],
   audiences: ["分销商", "羽毛球俱乐部", "体育用品店", "OEM 买家"],
   coreBusiness: [
@@ -334,9 +336,11 @@ export const common = {
   chatWhatsapp: "WhatsApp 聊天",
   contactWhatsapp: "通过 WhatsApp 联系",
   contactFacebook: "通过 Facebook 联系",
+  contactLine: "通过 LINE 联系",
   contactEmail: "通过邮件联系",
   whatsapp: "WhatsApp",
   facebook: "Facebook",
+  line: "LINE",
   email: "邮件",
   mediaComingSoon: "媒体即将上线",
   requestMediaAccess: "申请媒体访问",
@@ -661,10 +665,10 @@ export const contact = {
   seo: {
     title: "联系 | VANTAGE SPORTS",
     description:
-      "联系 VANTAGE SPORTS 进行分销商、俱乐部、体育店及 OEM 咨询。WhatsApp、Facebook、邮件或意向表单。",
+      "联系 VANTAGE SPORTS 进行分销商、俱乐部、体育店及 OEM 咨询。WhatsApp、Facebook、LINE、邮件或意向表单。",
   },
   title: "联系",
-  subtitle: "通过 WhatsApp、Facebook、邮件或下方意向表联系 VANTAGE SPORTS 合作团队。",
+  subtitle: "通过 WhatsApp、Facebook、LINE、邮件或下方意向表联系 VANTAGE SPORTS 合作团队。",
   formTitle: "VANTAGE SPORTS 意向表",
   formNote: "提交内容将记录至 VANTAGE 线索系统。合作团队将在 2 个工作日内回复。",
   fields: {
@@ -815,7 +819,7 @@ export const downloadCenter = {
       path: "/media-library",
     },
   ],
-  exportNote: "需要批量素材访问？请携带分销商简介联系 partners@vantage-sports.com。",
+  exportNote: "需要批量素材访问？请携带分销商简介联系 contact@vantagesports.com。",
 };
 
 // Re-export type for product catalog typing

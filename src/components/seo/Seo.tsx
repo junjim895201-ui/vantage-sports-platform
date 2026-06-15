@@ -7,6 +7,7 @@ type SeoProps = {
   description: string;
   path?: string;
   keywords?: string;
+  noindex?: boolean;
 };
 
 function setMeta(name: string, content: string, attr: "name" | "property" = "name") {
@@ -41,7 +42,7 @@ function setHreflang(hreflang: string, href: string) {
   el.href = href;
 }
 
-export default function Seo({ title, description, path = "", keywords }: SeoProps) {
+export default function Seo({ title, description, path = "", keywords, noindex = false }: SeoProps) {
   const { locale, content } = useI18n();
   const { site } = content;
 
@@ -52,6 +53,7 @@ export default function Seo({ title, description, path = "", keywords }: SeoProp
 
     document.title = title;
     setMeta("description", description);
+    setMeta("robots", noindex ? "noindex, nofollow" : "index, follow");
     setMeta("og:title", title, "property");
     setMeta("og:description", description, "property");
     setMeta("og:url", url, "property");
@@ -68,7 +70,7 @@ export default function Seo({ title, description, path = "", keywords }: SeoProp
     if (keywords) {
       setMeta("keywords", keywords);
     }
-  }, [title, description, path, keywords, locale, site.name, site.url]);
+  }, [title, description, path, keywords, locale, site.name, site.url, noindex]);
 
   return null;
 }

@@ -36,9 +36,6 @@ export default function DownloadCenterPage() {
             <p className="text-sm text-slate-600">{downloadCenter.exportNote}</p>
           </div>
           <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-            <LocalizedLink to="/distributor-crm" className="btn btn-secondary w-full sm:w-auto">
-              {common.leadsTable.viewCrm}
-            </LocalizedLink>
             <LocalizedLink to="/contact" className="btn btn-primary w-full sm:w-auto">
               {common.contactUs}
             </LocalizedLink>

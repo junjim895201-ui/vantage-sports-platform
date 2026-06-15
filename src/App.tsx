@@ -42,6 +42,9 @@ function localeChildren(prefix: "" | "/zh") {
       ))}
       <Route path="about" element={<Navigate to={`${prefix}/about-factory`} replace />} />
       <Route path="oem-service" element={<Navigate to={`${prefix}/oem-manufacturing`} replace />} />
+      <Route path="dealer" element={<Navigate to={`${prefix}/distributor-program`} replace />} />
+      <Route path="club-testing" element={<Navigate to={`${prefix}/shuttle-testing`} replace />} />
+      <Route path="oem" element={<Navigate to={`${prefix}/oem-manufacturing`} replace />} />
     </>
   );
 }

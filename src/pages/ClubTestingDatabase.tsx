@@ -27,6 +27,7 @@ export default function ClubTestingDatabasePage() {
         description={clubTestingDatabase.seo.description}
         path="/club-testing-database"
         keywords={common.seoKeywords.clubTestingDatabase}
+        noindex
       />
       <PageHero title={clubTestingDatabase.title} subtitle={clubTestingDatabase.subtitle} />
 

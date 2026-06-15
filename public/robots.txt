@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vantage-sports.vercel.app/sitemap.xml
+Sitemap: https://vantage-sports-platform.vercel.app/sitemap.xml

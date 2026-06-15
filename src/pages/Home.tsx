@@ -78,9 +78,9 @@ export default function HomePage() {
               <h3 className="font-semibold text-navy">{downloadCenter.title}</h3>
               <p className="mt-2 text-sm text-slate-500">{downloadCenter.subtitle}</p>
             </LocalizedLink>
-            <LocalizedLink to="/distributor-crm" className="card block hover:border-gold/40">
-              <h3 className="font-semibold text-navy">{distributorCrm.title}</h3>
-              <p className="mt-2 text-sm text-slate-500">{distributorCrm.subtitle}</p>
+            <LocalizedLink to="/factory-partners" className="card block hover:border-gold/40">
+              <h3 className="font-semibold text-navy">{content.factoryPartners.title}</h3>
+              <p className="mt-2 text-sm text-slate-500">{content.factoryPartners.subtitle}</p>
             </LocalizedLink>
           </div>
         </div>

@@ -7,12 +7,13 @@ export const site = {
   tagline: "东南亚体育分销与 OEM 平台",
   description:
     "VANTAGE SPORTS 帮助分销商、羽毛球俱乐部、体育用品店和 OEM 买家，在泰国、马来西亚、菲律宾和越南获取工厂直供羽毛球及贴牌装备。",
-  url: "https://vantage-sports.vercel.app",
+  url: "https://vantage-sports-platform.vercel.app",
   email: "partners@vantage-sports.com",
+  // DEPLOYMENT DEMO: WhatsApp number must be replaced before real outreach.
   whatsapp: "60123456789",
   whatsappDisplay: "+60 12-345 6789",
   facebook: "https://www.facebook.com/vantage.sports.sea",
-  line: "https://line.me/R/ti/p/@vantagesports",
+  line: "https://line.me/R/ti/p/@vantagesports", // Disabled in UI — link returns 404 until official LINE is live
   markets: ["泰国", "马来西亚", "菲律宾", "越南"],
   audiences: ["分销商", "羽毛球俱乐部", "体育用品店", "OEM 买家"],
   coreBusiness: [
@@ -34,11 +35,11 @@ export const nav = [
 ];
 
 export const footerNav = [
-  { label: "分销商 CRM", path: "/distributor-crm" },
-  { label: "试打数据库", path: "/club-testing-database" },
   { label: "试打计划", path: "/shuttle-testing" },
+  { label: "OEM 制造", path: "/oem-manufacturing" },
   { label: "下载中心", path: "/download-center" },
   { label: "资源中心", path: "/distributor-resources" },
+  { label: "联系", path: "/contact" },
 ];
 
 export const home = {
@@ -664,10 +665,10 @@ export const contact = {
   seo: {
     title: "联系 | VANTAGE SPORTS",
     description:
-      "联系 VANTAGE SPORTS 进行分销商、俱乐部、体育店及 OEM 咨询。WhatsApp、Facebook、LINE、邮件或意向表单。",
+      "联系 VANTAGE SPORTS 进行分销商、俱乐部、体育店及 OEM 咨询。WhatsApp、Facebook、邮件或意向表单。",
   },
   title: "联系",
-  subtitle: "通过 WhatsApp、Facebook、LINE、邮件或下方意向表联系 VANTAGE SPORTS 合作团队。",
+  subtitle: "通过 WhatsApp、Facebook、邮件或下方意向表联系 VANTAGE SPORTS 合作团队。",
   formTitle: "VANTAGE SPORTS 意向表",
   formNote: "提交内容将记录至 VANTAGE 线索系统。合作团队将在 2 个工作日内回复。",
   fields: {

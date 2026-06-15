@@ -37,15 +37,6 @@ export default function ContactChannels({ showEmail = true, layout = "row" }: Pr
       >
         {common.facebook}
       </a>
-      <a
-        href={site.line}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="btn min-h-12 flex-1 bg-[#06C755] text-white"
-        aria-label={common.contactLine}
-      >
-        {common.line}
-      </a>
       {showEmail && (
         <a href={mailUrl} className="btn min-h-12 flex-1 bg-navy text-white" aria-label={common.contactEmail}>
           {common.email}

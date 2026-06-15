@@ -41,6 +41,7 @@ export default function DistributorCrmPage() {
         description={distributorCrm.seo.description}
         path="/distributor-crm"
         keywords={common.seoKeywords.distributorCrm}
+        noindex
       />
       <PageHero title={distributorCrm.title} subtitle={distributorCrm.subtitle} />
 

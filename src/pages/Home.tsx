@@ -7,7 +7,7 @@ import { useI18n } from "../i18n";
 
 export default function HomePage() {
   const { content } = useI18n();
-  const { home, common } = content;
+  const { home, common, productComparison, downloadCenter, distributorCrm } = content;
 
   return (
     <>
@@ -61,6 +61,27 @@ export default function HomePage() {
                 <p className="mt-2 text-sm text-slate-500">{a.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section bg-slate-50">
+        <div className="container-main">
+          <h2 className="text-2xl font-bold text-navy">{distributorCrm.pipelineTitle}</h2>
+          <p className="mt-2 max-w-2xl text-sm text-slate-600">{distributorCrm.intro}</p>
+          <div className="mt-5 grid gap-4 sm:grid-cols-3">
+            <LocalizedLink to="/product-comparison" className="card block hover:border-gold/40">
+              <h3 className="font-semibold text-navy">{productComparison.title}</h3>
+              <p className="mt-2 text-sm text-slate-500">{productComparison.subtitle}</p>
+            </LocalizedLink>
+            <LocalizedLink to="/download-center" className="card block hover:border-gold/40">
+              <h3 className="font-semibold text-navy">{downloadCenter.title}</h3>
+              <p className="mt-2 text-sm text-slate-500">{downloadCenter.subtitle}</p>
+            </LocalizedLink>
+            <LocalizedLink to="/distributor-crm" className="card block hover:border-gold/40">
+              <h3 className="font-semibold text-navy">{distributorCrm.title}</h3>
+              <p className="mt-2 text-sm text-slate-500">{distributorCrm.subtitle}</p>
+            </LocalizedLink>
           </div>
         </div>
       </section>

@@ -1,14 +1,16 @@
 import type { FormEvent } from "react";
 import { useState } from "react";
+import { useLeadSubmit } from "../../hooks/useLeadSubmit";
 import { useI18n } from "../../i18n";
 
 export default function ContactForm() {
   const { content } = useI18n();
   const { contact, common } = content;
   const [submitted, setSubmitted] = useState(false);
+  const trackLead = useLeadSubmit("contact");
 
-  function handleSubmit(e: FormEvent) {
-    e.preventDefault();
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    trackLead(e);
     setSubmitted(true);
   }
 

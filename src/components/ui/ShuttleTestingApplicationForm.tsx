@@ -1,5 +1,6 @@
 import type { FormEvent } from "react";
 import { useState } from "react";
+import { useLeadSubmit } from "../../hooks/useLeadSubmit";
 import { useI18n } from "../../i18n";
 
 const inputClass =
@@ -9,9 +10,10 @@ export default function ShuttleTestingApplicationForm() {
   const { content } = useI18n();
   const { testing, common } = content;
   const [submitted, setSubmitted] = useState(false);
+  const trackLead = useLeadSubmit("testing");
 
-  function handleSubmit(e: FormEvent) {
-    e.preventDefault();
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    trackLead(e);
     setSubmitted(true);
   }
 

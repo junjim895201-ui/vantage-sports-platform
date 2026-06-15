@@ -1,7 +1,6 @@
 import type { ShuttleProduct } from "./products";
 import { factoryCapabilities as enFactoryCapabilities } from "./products";
 
-// TODO: Replace with official production contact information before public launch
 export const site = {
   name: "VANTAGE SPORTS",
   brand: "VANTAGE SPORTS",
@@ -9,10 +8,10 @@ export const site = {
   description:
     "VANTAGE SPORTS 帮助分销商、羽毛球俱乐部、体育用品店和 OEM 买家，在泰国、马来西亚、菲律宾和越南获取工厂直供羽毛球及贴牌装备。",
   url: "https://vantage-sports.vercel.app",
-  email: "contact@vantagesports.com",
+  email: "partners@vantage-sports.com",
   whatsapp: "60123456789",
   whatsappDisplay: "+60 12-345 6789",
-  facebook: "https://facebook.com/vantagesports",
+  facebook: "https://www.facebook.com/vantage.sports.sea",
   line: "https://line.me/R/ti/p/@vantagesports",
   markets: ["泰国", "马来西亚", "菲律宾", "越南"],
   audiences: ["分销商", "羽毛球俱乐部", "体育用品店", "OEM 买家"],
@@ -819,7 +818,7 @@ export const downloadCenter = {
       path: "/media-library",
     },
   ],
-  exportNote: "需要批量素材访问？请携带分销商简介联系 contact@vantagesports.com。",
+  exportNote: "需要批量素材访问？请携带分销商简介联系 partners@vantage-sports.com。",
 };
 
 // Re-export type for product catalog typing

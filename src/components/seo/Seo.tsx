@@ -29,12 +29,27 @@ function setCanonical(href: string) {
   el.href = href;
 }
 
+function setHreflang(hreflang: string, href: string) {
+  const selector = `link[rel="alternate"][hreflang="${hreflang}"]`;
+  let el = document.querySelector(selector) as HTMLLinkElement | null;
+  if (!el) {
+    el = document.createElement("link");
+    el.rel = "alternate";
+    el.hreflang = hreflang;
+    document.head.appendChild(el);
+  }
+  el.href = href;
+}
+
 export default function Seo({ title, description, path = "", keywords }: SeoProps) {
   const { locale, content } = useI18n();
   const { site } = content;
 
   useEffect(() => {
     const url = `${site.url}${localizedPath(path, locale)}`;
+    const enUrl = `${site.url}${localizedPath(path, "en")}`;
+    const zhUrl = `${site.url}${localizedPath(path, "zh")}`;
+
     document.title = title;
     setMeta("description", description);
     setMeta("og:title", title, "property");
@@ -47,6 +62,9 @@ export default function Seo({ title, description, path = "", keywords }: SeoProp
     setMeta("twitter:title", title);
     setMeta("twitter:description", description);
     setCanonical(url);
+    setHreflang("en", enUrl);
+    setHreflang("zh-Hans", zhUrl);
+    setHreflang("x-default", enUrl);
     if (keywords) {
       setMeta("keywords", keywords);
     }

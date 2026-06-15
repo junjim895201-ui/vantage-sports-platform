@@ -1,25 +1,33 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import LocaleLayout from "./components/layout/LocaleLayout";
 import AboutFactoryPage from "./pages/AboutFactory";
+import ClubTestingDatabasePage from "./pages/ClubTestingDatabase";
 import ContactPage from "./pages/Contact";
+import DistributorCrmPage from "./pages/DistributorCrm";
 import DistributorProgramPage from "./pages/DistributorProgram";
 import DistributorResourcesPage from "./pages/DistributorResources";
+import DownloadCenterPage from "./pages/DownloadCenter";
 import FactoryPartnersPage from "./pages/FactoryPartners";
 import HomePage from "./pages/Home";
 import MarketCoveragePage from "./pages/MarketCoverage";
 import MediaLibraryPage from "./pages/MediaLibrary";
 import OemManufacturingPage from "./pages/OemManufacturing";
+import ProductComparisonPage from "./pages/ProductComparison";
 import ProductsPage from "./pages/Products";
 import ShuttleTestingPage from "./pages/ShuttleTesting";
 
 const PAGE_ROUTES = [
   { path: "products", element: <ProductsPage /> },
+  { path: "product-comparison", element: <ProductComparisonPage /> },
   { path: "market-coverage", element: <MarketCoveragePage /> },
   { path: "factory-partners", element: <FactoryPartnersPage /> },
   { path: "about-factory", element: <AboutFactoryPage /> },
   { path: "oem-manufacturing", element: <OemManufacturingPage /> },
   { path: "distributor-program", element: <DistributorProgramPage /> },
+  { path: "distributor-crm", element: <DistributorCrmPage /> },
+  { path: "club-testing-database", element: <ClubTestingDatabasePage /> },
   { path: "distributor-resources", element: <DistributorResourcesPage /> },
+  { path: "download-center", element: <DownloadCenterPage /> },
   { path: "shuttle-testing", element: <ShuttleTestingPage /> },
   { path: "media-library", element: <MediaLibraryPage /> },
   { path: "contact", element: <ContactPage /> },

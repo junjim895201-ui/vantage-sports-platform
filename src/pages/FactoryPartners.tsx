@@ -77,6 +77,20 @@ export default function FactoryPartnersPage() {
         </div>
       </section>
 
+      <section className="section bg-navy py-10 text-white md:py-12">
+        <div className="container-main">
+          <h2 className="text-xl font-bold">{factoryPartners.recruitmentTitle}</h2>
+          <p className="mt-3 max-w-2xl text-sm text-slate-300">{factoryPartners.recruitmentDesc}</p>
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            {factoryPartners.recruitmentCtas.map((cta) => (
+              <LocalizedLink key={cta.path} to={cta.path} className="btn btn-primary w-full sm:w-auto">
+                {cta.label}
+              </LocalizedLink>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section bg-slate-50">
         <div className="container-main">
           <h2 className="text-xl font-bold text-navy">{factoryPartners.futureTitle}</h2>

@@ -3,8 +3,14 @@ import DistributorLeadForm from "../components/ui/DistributorLeadForm";
 import LocalizedLink from "../components/ui/LocalizedLink";
 import PageHero from "../components/ui/PageHero";
 import ResponsiveImage from "../components/ui/ResponsiveImage";
-import { phase6bMedia } from "../lib/media";
+import { mediaAlt, realAssets } from "../lib/media";
 import { useI18n } from "../i18n";
+
+const galleryItems = [
+  { src: realAssets.distributor.production, alt: mediaAlt.distributorProduction, label: "Factory Direct Supply" },
+  { src: realAssets.distributor.team, alt: mediaAlt.distributorTeam, label: "Production Capacity" },
+  { src: realAssets.distributor.campus, alt: mediaAlt.distributorCampus, label: "Campus & Export Scale" },
+] as const;
 
 export default function DistributorProgramPage() {
   const { content } = useI18n();
@@ -25,30 +31,17 @@ export default function DistributorProgramPage() {
           <h2 className="text-xl font-bold text-navy">{distributor.visualGalleryTitle}</h2>
           <p className="mt-2 max-w-2xl text-sm text-slate-600">{distributor.visualGalleryDesc}</p>
           <div className="mt-6 grid gap-4 md:grid-cols-3">
-            <div className="card overflow-hidden p-0">
-              <ResponsiveImage
-                src={phase6bMedia.factory.workers02084}
-                alt="Manufacturing partner production team — VANTAGE SPORTS factory-direct supply"
-                wrapperClassName="aspect-square w-full"
-              />
-              <p className="p-4 text-sm font-semibold text-navy">Factory Direct Supply</p>
-            </div>
-            <div className="card overflow-hidden p-0">
-              <ResponsiveImage
-                src={phase6bMedia.factory.workers02082}
-                alt="Shuttlecock production at VANTAGE SPORTS manufacturing partner facility"
-                wrapperClassName="aspect-square w-full"
-              />
-              <p className="p-4 text-sm font-semibold text-navy">Production Capacity</p>
-            </div>
-            <div className="card overflow-hidden p-0">
-              <ResponsiveImage
-                src={phase6bMedia.campus.aerial15}
-                alt="Aerial view of manufacturing partner campus — Southeast Asia distribution"
-                wrapperClassName="aspect-square w-full"
-              />
-              <p className="p-4 text-sm font-semibold text-navy">Campus & Export Scale</p>
-            </div>
+            {galleryItems.map((item) => (
+              <div key={item.label} className="card overflow-hidden p-0">
+                <ResponsiveImage
+                  src={item.src}
+                  alt={item.alt}
+                  wrapperClassName="aspect-[4/3] w-full"
+                  className="h-full w-full object-cover"
+                />
+                <p className="p-4 text-sm font-semibold text-navy">{item.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -67,9 +60,10 @@ export default function DistributorProgramPage() {
             </ul>
           </div>
           <ResponsiveImage
-            src={phase6bMedia.campus.aerial10}
-            alt="Manufacturing partner campus aerial — VANTAGE SPORTS distributor network"
+            src={realAssets.distributor.court}
+            alt={mediaAlt.distributorCourt}
             wrapperClassName="aspect-[4/3] w-full rounded-xl border border-slate-200"
+            className="h-full w-full object-cover"
             loading="lazy"
           />
         </div>

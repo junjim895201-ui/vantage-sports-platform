@@ -5,14 +5,11 @@ import KpiStatGrid from "../components/ui/KpiStatGrid";
 import LocalizedLink from "../components/ui/LocalizedLink";
 import MarketsSection from "../components/ui/MarketsSection";
 import ResponsiveImage from "../components/ui/ResponsiveImage";
-import { phase6aMedia, phase6bMedia } from "../lib/media";
+import { mediaAlt, phase6aMedia, realAssets } from "../lib/media";
 import { useI18n } from "../i18n";
 
-const visualCardImages = [
-  phase6bMedia.factory.aerial,
-  phase6bMedia.factory.building02089,
-  phase6bMedia.factory.building02007,
-];
+const visualCardImages = realAssets.homepage.trustCards;
+const visualCardAlts = [mediaAlt.trustAerial, mediaAlt.trustBuilding, mediaAlt.trustFacility];
 
 const productHeroImages = {
   G4: phase6aMedia.products.G4.hero,
@@ -35,8 +32,8 @@ export default function HomePage() {
 
       <section className="relative overflow-hidden bg-navy text-white">
         <ResponsiveImage
-          src={phase6bMedia.hero}
-          alt="Aerial view of VANTAGE SPORTS manufacturing partner campus in Southeast Asia"
+          src={realAssets.homepage.hero}
+          alt={mediaAlt.homepageHero}
           wrapperClassName="absolute inset-0 h-full w-full"
           className="h-full w-full object-cover opacity-40"
           loading="eager"
@@ -80,9 +77,9 @@ export default function HomePage() {
               >
                 <ResponsiveImage
                   src={productHeroImages[item.sku as keyof typeof productHeroImages]}
-                  alt={`${item.sku} shuttlecock tube`}
-                  wrapperClassName="aspect-[4/3] w-full bg-slate-100"
-                  className="h-full w-full object-contain p-4"
+                  alt={`${item.sku} shuttlecock — VANTAGE SPORTS partner series`}
+                  wrapperClassName="aspect-[4/3] w-full"
+                  className="h-full w-full object-cover"
                   loading="lazy"
                 />
                 <div className="border-t border-slate-100 p-4">
@@ -103,8 +100,9 @@ export default function HomePage() {
               <div key={card.title} className="card overflow-hidden p-0">
                 <ResponsiveImage
                   src={visualCardImages[i]}
-                  alt={`${card.title} — VANTAGE SPORTS manufacturing partner facility`}
+                  alt={visualCardAlts[i] ?? card.title}
                   wrapperClassName="aspect-[16/10] w-full"
+                  className="h-full w-full object-cover"
                   loading="lazy"
                 />
                 <div className="p-5">
@@ -134,9 +132,10 @@ export default function HomePage() {
             </ul>
           </div>
           <ResponsiveImage
-            src={phase6bMedia.factory.aerial}
-            alt="Drone aerial of manufacturing partner factory campus — VANTAGE SPORTS supply chain"
+            src={realAssets.homepage.trustCampus}
+            alt={mediaAlt.trustCampus}
             wrapperClassName="aspect-[4/3] w-full rounded-xl border border-slate-200 shadow-sm"
+            className="h-full w-full object-cover"
             loading="lazy"
           />
         </div>
@@ -159,9 +158,10 @@ export default function HomePage() {
       <section className="section">
         <div className="container-main grid items-center gap-8 lg:grid-cols-2">
           <ResponsiveImage
-            src={phase6bMedia.club.venue}
-            alt="INFIV partner badminton venue used for VANTAGE SPORTS club testing programs"
+            src={realAssets.club.coaching}
+            alt={mediaAlt.clubCoaching}
             wrapperClassName="aspect-[4/3] w-full rounded-xl border border-slate-200"
+            className="h-full w-full object-cover"
             loading="lazy"
           />
           <div>

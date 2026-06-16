@@ -1,9 +1,16 @@
 import Seo from "../components/seo/Seo";
 import ClubTestingCta from "../components/ui/ClubTestingCta";
+import PageHero from "../components/ui/PageHero";
 import ResponsiveImage from "../components/ui/ResponsiveImage";
 import ShuttleTestingApplicationForm from "../components/ui/ShuttleTestingApplicationForm";
-import { phase6bMedia } from "../lib/media";
+import { mediaAlt, realAssets } from "../lib/media";
 import { useI18n } from "../i18n";
+
+const clubGallery = [
+  { src: realAssets.club.venue, alt: mediaAlt.clubVenue, labelKey: "visualVenueLabel" as const },
+  { src: realAssets.club.coaching, alt: mediaAlt.clubCoaching, labelKey: "visualCoachingLabel" as const },
+  { src: realAssets.club.training, alt: mediaAlt.clubTraining, labelKey: "visualTrainingLabel" as const },
+];
 
 export default function ShuttleTestingPage() {
   const { content } = useI18n();
@@ -17,53 +24,30 @@ export default function ShuttleTestingPage() {
         path="/shuttle-testing"
         keywords={common.seoKeywords.testing}
       />
-      <section className="relative overflow-hidden bg-navy text-white">
-        <ResponsiveImage
-          src={phase6bMedia.club.venue}
-          alt="Partner badminton venue for VANTAGE SPORTS free shuttle testing program"
-          wrapperClassName="absolute inset-0 h-full w-full"
-          className="h-full w-full object-cover opacity-35"
-          loading="eager"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/60" />
-        <div className="container-main relative py-10 md:py-14">
-          <h1 className="text-3xl font-bold md:text-4xl">{testing.title}</h1>
-          <p className="mt-3 max-w-2xl text-sm text-slate-300 md:text-base">{testing.subtitle}</p>
-        </div>
-      </section>
+      <PageHero
+        title={testing.title}
+        subtitle={testing.subtitle}
+        imageSrc={realAssets.club.venue}
+        imageAlt={mediaAlt.clubVenue}
+      />
 
       <section className="section bg-slate-50">
         <div className="container-main">
           <h2 className="text-xl font-bold text-navy">{testing.visualGalleryTitle}</h2>
           <p className="mt-2 max-w-2xl text-sm text-slate-600">{testing.visualGalleryDesc}</p>
           <div className="mt-6 grid gap-4 md:grid-cols-3">
-            <div className="card overflow-hidden p-0">
-              <ResponsiveImage
-                src={phase6bMedia.club.venue}
-                alt="INFIV partner badminton courts for club shuttle testing"
-                wrapperClassName="aspect-[4/3] w-full"
-                loading="lazy"
-              />
-              <p className="p-4 text-sm font-semibold text-navy">{testing.visualVenueLabel}</p>
-            </div>
-            <div className="card overflow-hidden p-0">
-              <ResponsiveImage
-                src={phase6bMedia.club.coaching}
-                alt="Coaching session at partner badminton club — VANTAGE SPORTS testing program"
-                wrapperClassName="aspect-[4/3] w-full"
-                loading="lazy"
-              />
-              <p className="p-4 text-sm font-semibold text-navy">{testing.visualCoachingLabel}</p>
-            </div>
-            <div className="card overflow-hidden p-0">
-              <ResponsiveImage
-                src={phase6bMedia.club.training}
-                alt="Club training with partner shuttlecocks distributed by VANTAGE SPORTS"
-                wrapperClassName="aspect-[4/3] w-full"
-                loading="lazy"
-              />
-              <p className="p-4 text-sm font-semibold text-navy">{testing.visualTrainingLabel}</p>
-            </div>
+            {clubGallery.map((item) => (
+              <div key={item.src} className="card overflow-hidden p-0">
+                <ResponsiveImage
+                  src={item.src}
+                  alt={item.alt}
+                  wrapperClassName="aspect-[4/3] w-full"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+                <p className="p-4 text-sm font-semibold text-navy">{testing[item.labelKey]}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -1,15 +1,23 @@
 import Seo from "../components/seo/Seo";
 import LocalizedLink from "../components/ui/LocalizedLink";
 import ResponsiveImage from "../components/ui/ResponsiveImage";
-import { phase6aMedia, phase6bMedia } from "../lib/media";
+import { mediaAlt, phase6aMedia, realAssets } from "../lib/media";
 import { useI18n } from "../i18n";
 
 const oemVisualImages = {
-  capacity: phase6bMedia.hero,
-  quality: phase6bMedia.factory.building02089,
-  services: phase6bMedia.factory.workers02084,
+  capacity: realAssets.oem.capacity,
+  quality: realAssets.oem.quality,
+  services: realAssets.oem.production,
   privateLabel: phase6aMedia.products.G4.packaging,
-  dealerSupport: phase6bMedia.campus.aerial10,
+  dealerSupport: realAssets.distributor.campus,
+};
+
+const oemVisualAlts: Record<keyof typeof oemVisualImages, string> = {
+  capacity: mediaAlt.oemCapacity,
+  quality: mediaAlt.oemQuality,
+  services: mediaAlt.oemProduction,
+  privateLabel: "G4 tournament grade shuttlecock retail packaging — VANTAGE SPORTS partner series",
+  dealerSupport: mediaAlt.distributorCampus,
 };
 
 export default function OemManufacturingPage() {
@@ -30,8 +38,8 @@ export default function OemManufacturingPage() {
       />
       <section className="relative overflow-hidden bg-navy text-white">
         <ResponsiveImage
-          src={phase6bMedia.hero}
-          alt="Aerial campus view of VANTAGE SPORTS OEM manufacturing partner facility"
+          src={realAssets.oem.hero}
+          alt={mediaAlt.oemHero}
           wrapperClassName="absolute inset-0 h-full w-full"
           className="h-full w-full object-cover opacity-35"
           loading="eager"
@@ -60,8 +68,9 @@ export default function OemManufacturingPage() {
             >
               <ResponsiveImage
                 src={oemVisualImages[key]}
-                alt={`${section.title} — VANTAGE SPORTS OEM manufacturing partner`}
+                alt={oemVisualAlts[key]}
                 wrapperClassName={`aspect-[16/10] w-full rounded-xl border border-slate-200 ${index % 2 === 1 ? "lg:order-2" : ""}`}
+                className="h-full w-full object-cover"
                 loading="lazy"
               />
               <div className={`card ${index % 2 === 1 ? "lg:order-1" : ""}`}>
@@ -97,7 +106,7 @@ export default function OemManufacturingPage() {
               <div key={sku} className="card overflow-hidden p-0">
                 <ResponsiveImage
                   src={phase6aMedia.products[sku].packaging}
-                  alt={`${sku} private label packaging reference`}
+                  alt={`${sku} private label packaging — VANTAGE SPORTS OEM partner series`}
                   wrapperClassName="aspect-[3/5] w-full"
                   className="h-full w-full object-cover object-top"
                   loading="lazy"

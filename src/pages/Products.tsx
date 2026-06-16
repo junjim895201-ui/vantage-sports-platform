@@ -4,7 +4,7 @@ import DownloadCatalogCta from "../components/ui/DownloadCatalogCta";
 import LocalizedLink from "../components/ui/LocalizedLink";
 import ProductVisualCard from "../components/ui/ProductVisualCard";
 import ResponsiveImage from "../components/ui/ResponsiveImage";
-import { phase6aMedia, phase6bMedia } from "../lib/media";
+import { mediaAlt, phase6aMedia, realAssets } from "../lib/media";
 import { useI18n } from "../i18n";
 
 const productMediaMap = {
@@ -29,7 +29,7 @@ export default function ProductsPage() {
       <section className="relative overflow-hidden bg-navy text-white">
         <ResponsiveImage
           src={phase6aMedia.products.floating}
-          alt="Shuttlecock product hero"
+          alt="VANTAGE SPORTS G-series shuttlecock partner product series"
           wrapperClassName="absolute inset-0 h-full w-full"
           className="h-full w-full object-cover opacity-30"
           loading="eager"
@@ -127,9 +127,10 @@ export default function ProductsPage() {
             </div>
           </div>
           <ResponsiveImage
-            src={phase6bMedia.factory.qc02006}
-            alt="Quality control inspection at VANTAGE SPORTS manufacturing partner factory"
+            src={realAssets.products.qualityControl}
+            alt={mediaAlt.productQc}
             wrapperClassName="aspect-[4/3] w-full rounded-xl border border-slate-200"
+            className="h-full w-full object-cover"
             loading="lazy"
           />
         </div>
@@ -138,9 +139,10 @@ export default function ProductsPage() {
       <section className="section bg-slate-50">
         <div className="container-main grid items-center gap-8 lg:grid-cols-2">
           <ResponsiveImage
-            src={phase6bMedia.factory.warehouse01971}
-            alt="Warehouse and export staging at manufacturing partner facility"
+            src={realAssets.products.warehouse}
+            alt={mediaAlt.productWarehouse}
             wrapperClassName="aspect-[4/3] w-full rounded-xl border border-slate-200"
+            className="h-full w-full object-cover"
             loading="lazy"
           />
           <div>

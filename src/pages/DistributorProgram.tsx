@@ -26,12 +26,17 @@ export default function DistributorProgramPage() {
           <p className="mt-2 max-w-2xl text-sm text-slate-600">{distributor.visualGalleryDesc}</p>
           <div className="mt-6 grid gap-4 md:grid-cols-3">
             <div className="card overflow-hidden p-0">
-              <ResponsiveImage
-                src={phase6aMedia.products.G4.tube}
-                alt="G4 tournament grade shuttlecock"
-                wrapperClassName="aspect-square w-full bg-slate-100"
-                className="h-full w-full object-contain p-4"
-              />
+              <div className="grid grid-cols-3 gap-0.5 bg-navy">
+                {(["G4", "G6", "G7"] as const).map((sku) => (
+                  <ResponsiveImage
+                    key={sku}
+                    src={phase6aMedia.products[sku].hero}
+                    alt={`${sku} shuttlecock product`}
+                    wrapperClassName="aspect-square w-full"
+                    className="h-full w-full object-cover"
+                  />
+                ))}
+              </div>
               <p className="p-4 text-sm font-semibold text-navy">G4 · G6 · G7 Product Ladder</p>
             </div>
             <div className="card overflow-hidden p-0">

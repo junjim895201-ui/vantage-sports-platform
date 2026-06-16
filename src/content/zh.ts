@@ -136,6 +136,11 @@ export const products = {
     G6: "高耐用鹅毛羽毛球",
     G7: "训练级精准羽毛球",
   },
+  visualLabels: {
+    feature: "产品细节",
+    usage: "场上场景",
+    packaging: "包装展示",
+  },
   applicationLabel: "适用场景",
 };
 

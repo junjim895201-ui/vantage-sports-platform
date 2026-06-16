@@ -8,7 +8,7 @@ const oemVisualImages = {
   capacity: phase6aMedia.factory.masterplan,
   quality: phase6aMedia.factory.quality,
   services: phase6aMedia.factory.timeline,
-  privateLabel: phase6aMedia.products.G4.poster,
+  privateLabel: phase6aMedia.products.G4.packaging,
   dealerSupport: phase6aMedia.network,
 };
 

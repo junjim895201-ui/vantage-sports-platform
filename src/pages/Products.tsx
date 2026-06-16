@@ -71,8 +71,8 @@ export default function ProductsPage() {
                   positioning={p.positioning}
                   application={p.recommendedFor.join(" · ")}
                   highlights={p.highlights}
-                  imageSrc={media.tube}
-                  craftSrc={media.craft}
+                  visuals={media}
+                  visualLabels={copy.visualLabels}
                   manufacturingPartner={p.manufacturingPartner}
                 />
               );

@@ -139,6 +139,11 @@ export const products = {
     G6: "High Durability Goose Feather",
     G7: "Training Grade Precision Shuttle",
   },
+  visualLabels: {
+    feature: "Feature",
+    usage: "On Court",
+    packaging: "Packaging",
+  },
   applicationLabel: "Application",
 };
 

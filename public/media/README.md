@@ -11,3 +11,9 @@ public/media/
 ```
 
 Files in this folder are served at `/media/{path}`.
+
+## Phase 6B product visuals (G4 / G6 / G7)
+
+Brand-grade imagery at `phase6b/products/{SKU}/` — hero, feature, usage, packaging (not PDF screenshots).
+
+Legacy PDF-extracted assets in `phase6a/products/` are deprecated for UI use.

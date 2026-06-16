@@ -1,4 +1,11 @@
-/** Phase 6A visual assets — INFIV factory/product imagery (manufacturing partner only). */
+/** Phase 6A/6B visual assets — manufacturing partner imagery + brand product visuals. */
+export type ProductVisualSet = {
+  hero: string;
+  feature: string;
+  usage: string;
+  packaging: string;
+};
+
 export const phase6aMedia = {
   hero: "/media/phase6a/hero/hero_badminton_action_blue.webp",
   court: {
@@ -13,21 +20,24 @@ export const phase6aMedia = {
   },
   network: "/media/phase6a/network/global_business_map.webp",
   products: {
-    floating: "/media/phase6a/products/product_shuttlecock_floating.webp",
+    floating: "/media/phase6b/products/G4/hero.webp",
     G4: {
-      tube: "/media/phase6a/products/product_tube_G4.webp",
-      poster: "/media/phase6a/products/G4_product_poster_top.webp",
-      craft: "/media/phase6a/products/G4_product_detail_craft.webp",
+      hero: "/media/phase6b/products/G4/hero.webp",
+      feature: "/media/phase6b/products/G4/feature.webp",
+      usage: "/media/phase6b/products/G4/usage.webp",
+      packaging: "/media/phase6b/products/G4/packaging.webp",
     },
     G6: {
-      tube: "/media/phase6a/products/product_tube_G6.webp",
-      poster: "/media/phase6a/products/G6_product_poster_top.webp",
-      craft: "/media/phase6a/products/G6_product_detail_craft.webp",
+      hero: "/media/phase6b/products/G6/hero.webp",
+      feature: "/media/phase6b/products/G6/feature.webp",
+      usage: "/media/phase6b/products/G6/usage.webp",
+      packaging: "/media/phase6b/products/G6/packaging.webp",
     },
     G7: {
-      tube: "/media/phase6a/products/product_tube_G7.webp",
-      poster: "/media/phase6a/products/G7_product_poster_top.webp",
-      craft: "/media/phase6a/products/G7_product_detail_craft.webp",
+      hero: "/media/phase6b/products/G7/hero.webp",
+      feature: "/media/phase6b/products/G7/feature.webp",
+      usage: "/media/phase6b/products/G7/usage.webp",
+      packaging: "/media/phase6b/products/G7/packaging.webp",
     },
   },
 } as const;

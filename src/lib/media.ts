@@ -42,4 +42,27 @@ export const phase6aMedia = {
   },
 } as const;
 
+/** Phase 6B real photography — factory, drone, and club assets. */
+export const phase6bMedia = {
+  hero: "/media/phase6b/real-assets/hero_campus_aerial_15.webp",
+  campus: {
+    aerial10: "/media/phase6b/real-assets/campus_aerial_10.webp",
+    aerial15: "/media/phase6b/real-assets/hero_campus_aerial_15.webp",
+  },
+  factory: {
+    aerial: "/media/phase6b/real-assets/factory_aerial_5.webp",
+    building02089: "/media/phase6b/real-assets/factory_building_02089.webp",
+    building02007: "/media/phase6b/real-assets/factory_building_02007.webp",
+    workers02084: "/media/phase6b/real-assets/factory_workers_02084.webp",
+    workers02082: "/media/phase6b/real-assets/factory_workers_02082.webp",
+    qc02006: "/media/phase6b/real-assets/factory_qc_02006.webp",
+    warehouse01971: "/media/phase6b/real-assets/factory_warehouse_01971.webp",
+  },
+  club: {
+    venue: "/media/phase6b/real-assets/club_venue_04.webp",
+    coaching: "/media/phase6b/real-assets/club_coaching_54025.webp",
+    training: "/media/phase6b/real-assets/club_training_60208.webp",
+  },
+} as const;
+
 export type ProductSku = keyof typeof phase6aMedia.products;

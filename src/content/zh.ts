@@ -79,6 +79,13 @@ export const home = {
   ],
   ctaTitle: "准备与 VANTAGE SPORTS 合作？",
   ctaDesc: "告知您的国家、渠道类型及月采购量。我们将在 2 个工作日内回复。",
+  productPreviewTitle: "合作产品系列",
+  productPreviewSubtitle: "G4 赛事级 · G6 俱乐部训练 · G7 经济训练 — 由精选 OEM 制造伙伴生产。",
+  productPreview: [
+    { sku: "G4", label: "赛事级" },
+    { sku: "G6", label: "俱乐部训练" },
+    { sku: "G7", label: "经济训练" },
+  ],
   kpiTitle: "平台一览",
   kpiStats: [
     { value: "20+", label: "年行业经验" },
@@ -142,6 +149,10 @@ export const products = {
     packaging: "包装展示",
   },
   applicationLabel: "适用场景",
+  posterLabel: "产品规格海报",
+  warehouseTitle: "出口就绪仓储",
+  warehouseDesc:
+    "制造伙伴设有仓储及出口备货区，面向东盟羽毛球出货 — 由 VANTAGE SPORTS 统筹到岸成本规划。",
 };
 
 export const oem = {
@@ -211,6 +222,8 @@ export const oem = {
       desc: "出口单证、到岸成本规划及东南亚渠道伙伴入驻支持。",
     },
   },
+  productLineTitle: "合作产品参考",
+  productLineSubtitle: "制造伙伴 G4、G6、G7 规格海报 — 可用于贴牌制造项目。",
 };
 
 export const distributor = {
@@ -319,6 +332,12 @@ export const testing = {
   ctaTitle: "俱乐部试打计划",
   ctaSubtitle: "拥有 20 名以上活跃会员的羽毛球俱乐部与学院可申请免费 G4、G6、G7 样品筒。",
   ctaButton: "申请免费试打",
+  visualGalleryTitle: "真实球馆试打场景",
+  visualGalleryDesc:
+    "合作球馆与俱乐部场地 — 分销商与学院在大货前验证 G4、G6、G7 羽毛球表现。",
+  visualVenueLabel: "合作球馆",
+  visualCoachingLabel: "教练与学院",
+  visualTrainingLabel: "俱乐部训练",
   applicationTitle: "免费羽毛球试打申请",
   applicationSubtitle: "填写下方表单。符合条件的俱乐部、分销商及体育店可获 2–4 筒样品。",
   applicationNote:

@@ -5,14 +5,20 @@ import KpiStatGrid from "../components/ui/KpiStatGrid";
 import LocalizedLink from "../components/ui/LocalizedLink";
 import MarketsSection from "../components/ui/MarketsSection";
 import ResponsiveImage from "../components/ui/ResponsiveImage";
-import { phase6aMedia } from "../lib/media";
+import { phase6aMedia, phase6bMedia } from "../lib/media";
 import { useI18n } from "../i18n";
 
 const visualCardImages = [
-  phase6aMedia.factory.quality,
-  phase6aMedia.network,
-  phase6aMedia.factory.exterior,
+  phase6bMedia.factory.aerial,
+  phase6bMedia.factory.building02089,
+  phase6bMedia.factory.building02007,
 ];
+
+const productHeroImages = {
+  G4: phase6aMedia.products.G4.hero,
+  G6: phase6aMedia.products.G6.hero,
+  G7: phase6aMedia.products.G7.hero,
+} as const;
 
 export default function HomePage() {
   const { content } = useI18n();
@@ -29,8 +35,8 @@ export default function HomePage() {
 
       <section className="relative overflow-hidden bg-navy text-white">
         <ResponsiveImage
-          src={phase6aMedia.hero}
-          alt="Badminton athletes in competitive play"
+          src={phase6bMedia.hero}
+          alt="Aerial view of VANTAGE SPORTS manufacturing partner campus in Southeast Asia"
           wrapperClassName="absolute inset-0 h-full w-full"
           className="h-full w-full object-cover opacity-40"
           loading="eager"
@@ -63,13 +69,41 @@ export default function HomePage() {
 
       <section className="section">
         <div className="container-main">
+          <h2 className="text-2xl font-bold text-navy">{home.productPreviewTitle}</h2>
+          <p className="mt-2 max-w-2xl text-sm text-slate-600">{home.productPreviewSubtitle}</p>
+          <div className="mt-5 grid gap-4 sm:grid-cols-3">
+            {home.productPreview.map((item) => (
+              <LocalizedLink
+                key={item.sku}
+                to="/products"
+                className="card block overflow-hidden p-0 transition hover:border-gold/40"
+              >
+                <ResponsiveImage
+                  src={productHeroImages[item.sku as keyof typeof productHeroImages]}
+                  alt={`${item.sku} shuttlecock tube`}
+                  wrapperClassName="aspect-[4/3] w-full bg-slate-100"
+                  className="h-full w-full object-contain p-4"
+                  loading="lazy"
+                />
+                <div className="border-t border-slate-100 p-4">
+                  <p className="font-bold text-navy">{item.sku}</p>
+                  <p className="mt-1 text-sm text-slate-500">{item.label}</p>
+                </div>
+              </LocalizedLink>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container-main">
           <h2 className="text-2xl font-bold text-navy">{home.visualCardsTitle}</h2>
           <div className="mt-5 grid gap-4 md:grid-cols-3">
             {home.visualCards.map((card, i) => (
               <div key={card.title} className="card overflow-hidden p-0">
                 <ResponsiveImage
                   src={visualCardImages[i]}
-                  alt={card.title}
+                  alt={`${card.title} — VANTAGE SPORTS manufacturing partner facility`}
                   wrapperClassName="aspect-[16/10] w-full"
                   loading="lazy"
                 />
@@ -100,8 +134,8 @@ export default function HomePage() {
             </ul>
           </div>
           <ResponsiveImage
-            src={phase6aMedia.factory.masterplan}
-            alt="Manufacturing partner campus masterplan"
+            src={phase6bMedia.factory.aerial}
+            alt="Drone aerial of manufacturing partner factory campus — VANTAGE SPORTS supply chain"
             wrapperClassName="aspect-[4/3] w-full rounded-xl border border-slate-200 shadow-sm"
             loading="lazy"
           />
@@ -125,8 +159,8 @@ export default function HomePage() {
       <section className="section">
         <div className="container-main grid items-center gap-8 lg:grid-cols-2">
           <ResponsiveImage
-            src={phase6aMedia.court.lifestyle}
-            alt="Badminton club lifestyle scene"
+            src={phase6bMedia.club.venue}
+            alt="INFIV partner badminton venue used for VANTAGE SPORTS club testing programs"
             wrapperClassName="aspect-[4/3] w-full rounded-xl border border-slate-200"
             loading="lazy"
           />

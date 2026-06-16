@@ -78,6 +78,13 @@ export const home = {
   ],
   ctaTitle: "Ready to partner with VANTAGE SPORTS?",
   ctaDesc: "Tell us your country, channel type, and monthly volume. We respond within 2 business days.",
+  productPreviewTitle: "Partner Product Series",
+  productPreviewSubtitle: "G4 tournament · G6 club training · G7 economy — manufactured by selected OEM partners.",
+  productPreview: [
+    { sku: "G4", label: "Tournament Grade" },
+    { sku: "G6", label: "Club Training" },
+    { sku: "G7", label: "Economy Training" },
+  ],
   kpiTitle: "Platform at a Glance",
   kpiStats: [
     { value: "20+", label: "Years Industry Experience" },
@@ -145,6 +152,10 @@ export const products = {
     packaging: "Packaging",
   },
   applicationLabel: "Application",
+  posterLabel: "Product specification poster",
+  warehouseTitle: "Export-Ready Warehouse",
+  warehouseDesc:
+    "Manufacturing partners maintain warehouse and export staging for ASEAN-bound shuttlecock shipments — managed through VANTAGE SPORTS landed-cost planning.",
 };
 
 export const oem = {
@@ -214,6 +225,8 @@ export const oem = {
       desc: "Export documentation, landed-cost planning, and distributor onboarding for Southeast Asia channel partners.",
     },
   },
+  productLineTitle: "Partner Product Reference",
+  productLineSubtitle: "G4, G6, and G7 specification posters from manufacturing partners — available for private-label programs.",
 };
 
 export const distributor = {
@@ -304,6 +317,12 @@ export const testing = {
   ctaTitle: "Club Testing Program",
   ctaSubtitle: "Badminton clubs and academies with 20+ active members can apply for free G4, G6, and G7 sample tubes.",
   ctaButton: "Apply Free Shuttle Testing",
+  visualGalleryTitle: "Real Club & Venue Testing",
+  visualGalleryDesc:
+    "Partner venues and clubs where distributors and academies validate G4, G6, and G7 shuttlecocks before bulk orders.",
+  visualVenueLabel: "Partner Venue",
+  visualCoachingLabel: "Coaching & Academy",
+  visualTrainingLabel: "Club Training",
   applicationTitle: "Free Shuttle Testing Application",
   applicationSubtitle: "Complete the form below. Qualified clubs, distributors, and sports shops receive 2–4 sample tubes.",
   applicationNote:

@@ -4,7 +4,7 @@ import DownloadCatalogCta from "../components/ui/DownloadCatalogCta";
 import LocalizedLink from "../components/ui/LocalizedLink";
 import ProductVisualCard from "../components/ui/ProductVisualCard";
 import ResponsiveImage from "../components/ui/ResponsiveImage";
-import { phase6aMedia } from "../lib/media";
+import { phase6aMedia, phase6bMedia } from "../lib/media";
 import { useI18n } from "../i18n";
 
 const productMediaMap = {
@@ -127,11 +127,26 @@ export default function ProductsPage() {
             </div>
           </div>
           <ResponsiveImage
-            src={phase6aMedia.factory.quality}
-            alt="Manufacturing partner quality and technology credentials"
+            src={phase6bMedia.factory.qc02006}
+            alt="Quality control inspection at VANTAGE SPORTS manufacturing partner factory"
             wrapperClassName="aspect-[4/3] w-full rounded-xl border border-slate-200"
             loading="lazy"
           />
+        </div>
+      </section>
+
+      <section className="section bg-slate-50">
+        <div className="container-main grid items-center gap-8 lg:grid-cols-2">
+          <ResponsiveImage
+            src={phase6bMedia.factory.warehouse01971}
+            alt="Warehouse and export staging at manufacturing partner facility"
+            wrapperClassName="aspect-[4/3] w-full rounded-xl border border-slate-200"
+            loading="lazy"
+          />
+          <div>
+            <h2 className="text-xl font-bold text-navy">{copy.warehouseTitle}</h2>
+            <p className="mt-3 text-sm text-slate-600">{copy.warehouseDesc}</p>
+          </div>
         </div>
       </section>
 

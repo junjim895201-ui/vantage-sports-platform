@@ -1,15 +1,15 @@
 import Seo from "../components/seo/Seo";
 import LocalizedLink from "../components/ui/LocalizedLink";
 import ResponsiveImage from "../components/ui/ResponsiveImage";
-import { phase6aMedia } from "../lib/media";
+import { phase6aMedia, phase6bMedia } from "../lib/media";
 import { useI18n } from "../i18n";
 
 const oemVisualImages = {
-  capacity: phase6aMedia.factory.masterplan,
-  quality: phase6aMedia.factory.quality,
-  services: phase6aMedia.factory.timeline,
+  capacity: phase6bMedia.hero,
+  quality: phase6bMedia.factory.building02089,
+  services: phase6bMedia.factory.workers02084,
   privateLabel: phase6aMedia.products.G4.packaging,
-  dealerSupport: phase6aMedia.network,
+  dealerSupport: phase6bMedia.campus.aerial10,
 };
 
 export default function OemManufacturingPage() {
@@ -30,8 +30,8 @@ export default function OemManufacturingPage() {
       />
       <section className="relative overflow-hidden bg-navy text-white">
         <ResponsiveImage
-          src={phase6aMedia.factory.exterior}
-          alt="Manufacturing partner factory exterior"
+          src={phase6bMedia.hero}
+          alt="Aerial campus view of VANTAGE SPORTS OEM manufacturing partner facility"
           wrapperClassName="absolute inset-0 h-full w-full"
           className="h-full w-full object-cover opacity-35"
           loading="eager"
@@ -60,7 +60,7 @@ export default function OemManufacturingPage() {
             >
               <ResponsiveImage
                 src={oemVisualImages[key]}
-                alt={section.title}
+                alt={`${section.title} — VANTAGE SPORTS OEM manufacturing partner`}
                 wrapperClassName={`aspect-[16/10] w-full rounded-xl border border-slate-200 ${index % 2 === 1 ? "lg:order-2" : ""}`}
                 loading="lazy"
               />
@@ -89,6 +89,27 @@ export default function OemManufacturingPage() {
       </section>
 
       <section className="section bg-slate-50">
+        <div className="container-main">
+          <h2 className="text-xl font-bold text-navy">{oem.productLineTitle}</h2>
+          <p className="mt-2 text-sm text-slate-500">{oem.productLineSubtitle}</p>
+          <div className="mt-5 grid gap-4 sm:grid-cols-3">
+            {(["G4", "G6", "G7"] as const).map((sku) => (
+              <div key={sku} className="card overflow-hidden p-0">
+                <ResponsiveImage
+                  src={phase6aMedia.products[sku].packaging}
+                  alt={`${sku} private label packaging reference`}
+                  wrapperClassName="aspect-[3/5] w-full"
+                  className="h-full w-full object-cover object-top"
+                  loading="lazy"
+                />
+                <p className="border-t border-slate-100 p-3 text-center text-sm font-bold text-navy">{sku}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container-main">
           <h2 className="text-xl font-bold text-navy">{common.oemScope}</h2>
           <div className="mt-5 grid gap-4 sm:grid-cols-2 md:grid-cols-3">

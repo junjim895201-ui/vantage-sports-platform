@@ -1,4 +1,4 @@
-/** Phase 6A/6B visual assets — brand product visuals + real factory/club photography. */
+/** Phase 6A/6B/6C visual assets — brand product visuals + real factory/club photography. */
 export type ProductVisualSet = {
   hero: string;
   feature: string;
@@ -7,6 +7,18 @@ export type ProductVisualSet = {
 };
 
 const realBase = "/media/phase6b/real-assets";
+const phase6cCompareBase = "/media/phase6c/comparisons";
+
+/** Phase 6C before/after factory enhancement comparisons. */
+export const phase6cComparisons = {
+  heroCampus: `${phase6cCompareBase}/hero_campus_aerial_15_compare.webp`,
+  campusAerial: `${phase6cCompareBase}/campus_aerial_10_compare.webp`,
+  factoryAerial: `${phase6cCompareBase}/factory_aerial_5_compare.webp`,
+  building02089: `${phase6cCompareBase}/factory_building_02089_compare.webp`,
+  building02007: `${phase6cCompareBase}/factory_building_02007_compare.webp`,
+  workers02084: `${phase6cCompareBase}/factory_workers_02084_compare.webp`,
+  workers02082: `${phase6cCompareBase}/factory_workers_02082_compare.webp`,
+} as const;
 
 /** Real photography from VANTAGE_FACTORY_ASSETS — not PDF extractions. */
 export const phase6bMedia = {

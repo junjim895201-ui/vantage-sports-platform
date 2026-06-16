@@ -1,0 +1,76 @@
+{
+  "phase": "6C",
+  "policy": "Authentic retouch only \u2014 no synthetic factory imagery",
+  "outputs": [
+    {
+      "name": "hero_campus_aerial_15.webp",
+      "source": "02_DRONE/Campus_View/\u65e0\u4eba\u673a\u89c6\u9891(15).jpg",
+      "dimensions": "2400\u00d71350",
+      "bytes": 689020,
+      "kb": 673,
+      "sky": true,
+      "branding": true,
+      "heal_regions": 5
+    },
+    {
+      "name": "campus_aerial_10.webp",
+      "source": "02_DRONE/Campus_View/\u65e0\u4eba\u673a\u89c6\u9891(10).jpg",
+      "dimensions": "2400\u00d71350",
+      "bytes": 629710,
+      "kb": 615,
+      "sky": true,
+      "branding": true,
+      "heal_regions": 3
+    },
+    {
+      "name": "factory_aerial_5.webp",
+      "source": "02_DRONE/Factory_Aerial/\u65e0\u4eba\u673a\u89c6\u9891(5).jpg",
+      "dimensions": "2400\u00d71350",
+      "bytes": 558898,
+      "kb": 546,
+      "sky": true,
+      "branding": true,
+      "heal_regions": 4
+    },
+    {
+      "name": "factory_building_02089.webp",
+      "source": "01_FACTORY/Factory_Building/DSC02089.JPG",
+      "dimensions": "1333\u00d72000",
+      "bytes": 321802,
+      "kb": 314,
+      "sky": true,
+      "branding": true,
+      "heal_regions": 2
+    },
+    {
+      "name": "factory_building_02007.webp",
+      "source": "01_FACTORY/Factory_Building/DSC02007.JPG",
+      "dimensions": "1333\u00d72000",
+      "bytes": 586300,
+      "kb": 573,
+      "sky": false,
+      "branding": true,
+      "heal_regions": 2
+    },
+    {
+      "name": "factory_workers_02084.webp",
+      "source": "01_FACTORY/Workers/DSC02084.JPG",
+      "dimensions": "2000\u00d71333",
+      "bytes": 667820,
+      "kb": 652,
+      "sky": false,
+      "branding": true,
+      "heal_regions": 3
+    },
+    {
+      "name": "factory_workers_02082.webp",
+      "source": "01_FACTORY/Workers/DSC02082.JPG",
+      "dimensions": "2000\u00d71333",
+      "bytes": 793642,
+      "kb": 775,
+      "sky": false,
+      "branding": true,
+      "heal_regions": 2
+    }
+  ]
+}

@@ -6,7 +6,7 @@ export const site = {
   tagline: "Southeast Asia Sports Distribution & OEM Platform",
   description:
     "VANTAGE SPORTS helps distributors, badminton clubs, sports shops, and OEM buyers access factory-direct shuttlecocks and private-label equipment across Thailand, Malaysia, Philippines, and Vietnam.",
-  url: "https://vantage-sports-platform.vercel.app",
+  url: "https://vantagesports.asia",
   email: "partners@vantage-sports.com",
   // DEPLOYMENT DEMO: WhatsApp number must be replaced before real outreach.
   whatsapp: "60123456789",

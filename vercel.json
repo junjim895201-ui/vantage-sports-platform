@@ -1,3 +1,17 @@
 {
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "www.vantagesports.asia" }],
+      "destination": "https://vantagesports.asia/",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.vantagesports.asia" }],
+      "destination": "https://vantagesports.asia/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }

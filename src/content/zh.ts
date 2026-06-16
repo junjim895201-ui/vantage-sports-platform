@@ -7,7 +7,7 @@ export const site = {
   tagline: "东南亚体育分销与 OEM 平台",
   description:
     "VANTAGE SPORTS 帮助分销商、羽毛球俱乐部、体育用品店和 OEM 买家，在泰国、马来西亚、菲律宾和越南获取工厂直供羽毛球及贴牌装备。",
-  url: "https://vantage-sports-platform.vercel.app",
+  url: "https://vantagesports.asia",
   email: "partners@vantage-sports.com",
   // DEPLOYMENT DEMO: WhatsApp number must be replaced before real outreach.
   whatsapp: "60123456789",

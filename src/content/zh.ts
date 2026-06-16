@@ -144,9 +144,9 @@ export const products = {
     G7: "训练级精准羽毛球",
   },
   visualLabels: {
-    feature: "产品细节",
-    usage: "场上场景",
-    packaging: "包装展示",
+    feature: "工艺细节",
+    usage: "场上使用",
+    packaging: "零售包装",
   },
   applicationLabel: "适用场景",
   posterLabel: "产品规格海报",

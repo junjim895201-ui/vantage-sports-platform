@@ -147,9 +147,9 @@ export const products = {
     G7: "Training Grade Precision Shuttle",
   },
   visualLabels: {
-    feature: "Feature",
-    usage: "On Court",
-    packaging: "Packaging",
+    feature: "Craft Detail",
+    usage: "On-Court Use",
+    packaging: "Retail Packaging",
   },
   applicationLabel: "Application",
   posterLabel: "Product specification poster",

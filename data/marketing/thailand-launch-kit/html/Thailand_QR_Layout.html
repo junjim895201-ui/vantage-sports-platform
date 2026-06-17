@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"/>
+  <title>VANTAGE SPORTS — Thailand QR Layout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+@page { size: A4 portrait; margin: 10mm; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Sarabun", "Noto Sans Thai", "Segoe UI", system-ui, sans-serif;
+  color: #0f172a;
+  background: #fff;
+  font-size: 9.5pt;
+  line-height: 1.45;
+}
+.page {
+  width: 190mm;
+  min-height: 277mm;
+  margin: 0 auto;
+  padding: 0;
+  page-break-after: always;
+}
+.brand-bar {
+  background: linear-gradient(135deg, #0a1628 0%, #132337 100%);
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.brand-bar h1 {
+  font-size: 22pt;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+.brand-bar .tagline { font-size: 10pt; opacity: 0.92; margin-top: 4px; }
+.brand-bar .meta { font-size: 7.5pt; opacity: 0.7; margin-top: 8px; }
+.eyebrow {
+  font-size: 8pt;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #b8860b;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+h2 { font-size: 13pt; margin: 10px 0 6px; color: #0a1628; }
+h3 { font-size: 10pt; margin: 8px 0 4px; color: #1e3a5f; }
+p { margin-bottom: 6px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin: 10px 0; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0; }
+.card {
+  border: 1px solid #d4dce8;
+  border-radius: 6px;
+  padding: 10px;
+  background: #f8fafc;
+}
+.card .sku {
+  font-size: 16pt;
+  font-weight: 800;
+  color: #0a1628;
+  line-height: 1;
+}
+.card .grade { font-size: 8.5pt; color: #b8860b; font-weight: 700; margin: 4px 0 6px; }
+.card ul { margin-left: 14px; font-size: 8pt; }
+.bullets { margin: 6px 0 6px 16px; font-size: 8.5pt; }
+.bullets li { margin-bottom: 3px; }
+.specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 12px;
+  font-size: 8pt;
+  margin: 8px 0;
+  padding: 8px 10px;
+  background: #eef2f7;
+  border-radius: 4px;
+}
+.specs div strong { color: #0a1628; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 8pt;
+  margin: 8px 0;
+}
+th, td {
+  border: 1px solid #cbd5e1;
+  padding: 5px 6px;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #0a1628; color: #fff; font-weight: 600; }
+tr:nth-child(even) td { background: #f8fafc; }
+.footer {
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 2px solid #0a1628;
+  font-size: 7.5pt;
+  color: #475569;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+}
+.footer strong { color: #0a1628; }
+.cta-box {
+  background: #0a1628;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 8.5pt;
+}
+.cta-box a { color: #fbbf24; text-decoration: none; }
+.disclaimer {
+  font-size: 7pt;
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 6px;
+}
+.qr-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
+  text-align: center;
+}
+.qr-item img { width: 38mm; height: 38mm; }
+.qr-item .label { font-size: 11pt; font-weight: 700; margin-top: 8px; color: #0a1628; }
+.qr-item .url { font-size: 7pt; color: #64748b; word-break: break-all; margin-top: 4px; }
+.bilingual { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.bilingual .col { padding: 8px; border: 1px solid #e2e8f0; border-radius: 4px; }
+.bilingual .lang { font-size: 7pt; font-weight: 700; color: #b8860b; text-transform: uppercase; margin-bottom: 4px; }
+@media print {
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: auto; min-height: auto; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="brand-bar">
+    <h1>VANTAGE SPORTS</h1>
+    <div class="tagline">Thailand Launch · QR Contact Layout / เลย์เอาต์ QR ประเทศไทย</div>
+    <div class="meta">Print at 100% scale · Cut along card borders · 2026-06-17</div>
+  </div>
+
+  <p style="text-align:center;margin:12px 0 4px;font-size:10pt">
+    <strong>Scan to connect</strong> — สแกนเพื่อเข้าถึงช่องทาง VANTAGE SPORTS
+  </p>
+  <p style="text-align:center;font-size:8pt;color:#64748b;margin-bottom:16px">
+    PREPARATION ONLY — NO OUTREACH · Materials for print/POS only — do not send unsolicited messages
+  </p>
+
+  <div class="qr-grid">
+    <div class="qr-item">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQgAAAEIAQAAAACLjVdSAAABj0lEQVR4nO1ZQY4DMQizo/7/y6wwkHRPPZVml0ZVlYmQhlrGmJSGF2u9CsA34v/i8QAYuyAKAaPv9+k4PCAkCBocCTog5/SaTFdfBMniBuj00HOeXpVpa4SJGQ7IO9/yZyKMWSpWYvKZPD6uH8hfb6RDIUk9mMzDg7Gl10ugocfLMl0tETyVQe8t2VYm1ws3BJTvMJpYkugM1A+qxyKcWGASwEytF0pNrcrEK0efwXpqeeA0UanIsI7kB+2wgQJmP3Pk/MKw6Shn+jTLzOQHAgjbSvLElVsyXV0RdC9qVsIqi0pWk7kp0x5+sKwG40vN14byg6mcVTdW7SblZJqeriiSPeQz+q3GOaqGbsq0J8LKlzGth8MSA+44v76OilB0OIjkDdldmXbOt/CVGlJTzMT5FlpODPM2W4qSYA30pzgQIHQkxcNPJs77OP++wEU1aDKxvzye9iZcdK0c5SIFmYsH40YojCpvy3T1RVgML6irwhCQvGu/KtO++yCkTS1o9i3RWP9xeabrG/Fr9eDxA07zqyG5AhkTAAAAAElFTkSuQmCC" alt="Website"/>
+      <div class="label">Website / เว็บไซต์</div>
+      <div class="url">https://vantagesports.asia/th</div>
+    </div>
+    <div class="qr-item">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASgAAAEoAQAAAADDfFG0AAACI0lEQVR4nO1a0W7DQAgD1P//ZSZsuKTVovahujAN0lXphQfkgPFxU5cPzD5xkvEqGyTKHiLKOxdlrqnHiqsfTwavsgfwEKAWEAVcwA6/6sngtcyJihMb3vvLEx+8yp6Q8LwUIOmF16X9Oy/NK7AKzLrE1Yy/pJBJyiKVATDvHb1t95IkK1nFeL7KpWv0tt3rcWSXnPIsyvIArG30tt1LsgsKE40lGGy/4HOf/HpGFZkEuUrSgk4tMSE6+utk1PTKIqSih7IPwg+wiGDX6rDtXkpJr+yLSDJmFxdT9XeN3rZ7yWIqTy5L8iJz5XLX6O0e/SWRRvygECvP1HPP3TV62+6l4CoJW/OIGlWkbh3+OhlJXchfxC47ALgrt0Vd37bd5KWZW6FTS06gU2bP7B39Zr538Hz91T5ojXdmnnO2Y4oqLEBOClNf1Ayx69u2+7w8tQVmXwpZT87XvxD9Vi+vPZCKZmPEvDDkBOuyc/Tv7dt6QkrQH+p+bZCwM2obvd3i5QEQBEQgFqzPMw/0R9x3jv69fd3LoyapuE6SokTY6InX/ZDycCNnhCVUscQ22fpt759P0HJflN8l+Ye/rub3jvscUNSZJEp15hPL2BRl/RdAcVflF++7Vodt95LnXJLjfLuGYJNfV6hqDfFDqOIsEugN319nofN8O/si1f7or9/5S2qYXz/X4LUtm9it59tSZ5HQ+Lk4/HWlv/7g27bxSuuKxA81dDy8vaGJawAAAABJRU5ErkJggg==" alt="Facebook"/>
+      <div class="label">Facebook / Facebook</div>
+      <div class="url">https://www.facebook.com/vantage.sports.sea</div>
+    </div>
+    <div class="qr-item">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAagAAAGoAQAAAAA7yUxtAAAD8klEQVR4nO1c2XLkMAgEVf7/l9kS3WAmT5s8rGQWJRmfVEVuczVo1OQXY/1GSEaqjnka/8PT+BJR7JmKiajrm3+q+RZ/fhB3vmBeq6nUlz//jY5wS3h0Awig9gBWcef981qN8RJipeLoAClXLhziQMud989r9ZcyALPNYppDx4dG0V46r376haEOSygajl2h3DyavWpeqzNe5rvm6gSdgt9CBOI30I/ZW+a1mkpJ6o39xU+I3D+v1VRKi5lTOCpqVYTytJDVfb1gXqtx/mWRgolbw/RdgJA4wUQyArl/XquplFKnErP0WB/uK7MyZNX3z2v1lVLHROOMx/Oebe1PZGJ7q65ssJ+vmFdLqa8PWkMclL1XeI1wcbST+/j+ea3O8aFlrG5Imj07Nm55H0/73/3zWo2lbOuTARKYRQSFdF4bOb9ABRv/dT7ekE+Iwp95QBiUIoIP33nHe9hRSlx9uJViDKuR5BUffuX+ea3OUkpDaG73goDSdGDk5mkrxx5ekH8J7V7GF45aGEXkyzw9eJ22h5Jmz0gnwkLmhRo4Tnx4XL/EqSZhmbJULZE2x50Zm7zFzjeU0owKLYrJYfzAUT2dG9nL8YZ5rb5SqhlhiAeBCRsIqGCqEIlMP8Bp/dLIki3qJ1XT/KYnI8PVV7yHfflDLbbQ9gfbNcjKB2mfVP4L5rX6SmmWuywwi9Ad7Tbg6QPR6Y86jbJG0K6uUFGrpI6hYyoDe33Ne9hSSlE+eRyYlm16L0b2GGMPT9tDizZDQ7HSyah9FeUuEoqeQNtL3sPVVEqykmIPtwtW16/W36BChu89228jbDeUXfl3RNgg4DvkO9g3NfHhca00h0qj2u+70COWKzPY37GH+7r77cZqKqUgnWo6LCXRCioqSMXp772I3xAwhQXBjA9BS8EmDr9x2B4K/JM9vaJsYct6Vzi4APF+u7EaSymUSWkDGRp6HO/Zcl23Akf3jnn19l+SLTbFIj4llafjZvptjqOsUCML1imyZQYddc2s33P/e7ia1yutrKjMQnOGi0/N+d//h2ukvvsvpl9GNoonvH0Ungv99PRh47/O8huy9Yb0xcfqcuTRT0a2u+qhYfPOH483tPTWfFacoxU7xviv0/VlKUgpV1c+JNTWvbLscp8c/Trbb7OH1LA+1g5hC9a3rBEbvE76L9s7Gl8QwDJYXVxZljBjyd7gdbi/V3KZA87l4nIucHjaRn3Rw+BVx7Gnoax0wWnhi22cjkLmDGjHf12iXxZ6VZrpU7eyFWD658/nXxZHym0mxiSl+M03ecvYw5N4KXY1uMP6FXpcb56lMDBUg9dh/vCHY/1UwMdI1TFPo46uT+MPKwFkt021KB8AAAAASUVORK5CYII=" alt="WhatsApp"/>
+      <div class="label">WhatsApp / WhatsApp</div>
+      <div class="url">https://wa.me/601137307654?text=สวัสดี%20VANTAGE%20SPORTS%20สนใจร่วมเป็นพันธมิตร</div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-top:24px">
+    <div class="card">
+      <h3>Usage / การใช้งาน</h3>
+      <ul class="bullets">
+        <li>Brochure back panel / ด้านหลังโบรชัวร์</li>
+        <li>Sample shipment insert / ใบแทรกในกล่องตัวอย่าง</li>
+        <li>Trade show booth / บูธงานแสดงสินค้า</li>
+        <li>Distributor POS counter card / การ์ดเคาน์เตอร์ร้าน</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Brand / แบรนด์</h3>
+      <p><strong>VANTAGE SPORTS</strong></p>
+      <p>OEM Partner: INFIV (精彩永恒)</p>
+      <p>Email: partners@vantage-sports.com</p>
+      <p>Thailand site: https://vantagesports.asia/th</p>
+      <p>Products: G4 · G6 · G7</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div><strong>vantagesports.asia/th</strong></div>
+    <div style="text-align:right;font-size:7pt">PREPARATION ONLY — NO OUTREACH</div>
+  </div>
+
+</div>
+</body>
+</html>

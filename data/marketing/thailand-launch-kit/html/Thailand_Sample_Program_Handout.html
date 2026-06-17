@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"/>
+  <title>VANTAGE SPORTS — Thailand Sample Program Handout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+@page { size: A4 portrait; margin: 10mm; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Sarabun", "Noto Sans Thai", "Segoe UI", system-ui, sans-serif;
+  color: #0f172a;
+  background: #fff;
+  font-size: 9.5pt;
+  line-height: 1.45;
+}
+.page {
+  width: 190mm;
+  min-height: 277mm;
+  margin: 0 auto;
+  padding: 0;
+  page-break-after: always;
+}
+.brand-bar {
+  background: linear-gradient(135deg, #0a1628 0%, #132337 100%);
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.brand-bar h1 {
+  font-size: 22pt;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+.brand-bar .tagline { font-size: 10pt; opacity: 0.92; margin-top: 4px; }
+.brand-bar .meta { font-size: 7.5pt; opacity: 0.7; margin-top: 8px; }
+.eyebrow {
+  font-size: 8pt;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #b8860b;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+h2 { font-size: 13pt; margin: 10px 0 6px; color: #0a1628; }
+h3 { font-size: 10pt; margin: 8px 0 4px; color: #1e3a5f; }
+p { margin-bottom: 6px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin: 10px 0; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0; }
+.card {
+  border: 1px solid #d4dce8;
+  border-radius: 6px;
+  padding: 10px;
+  background: #f8fafc;
+}
+.card .sku {
+  font-size: 16pt;
+  font-weight: 800;
+  color: #0a1628;
+  line-height: 1;
+}
+.card .grade { font-size: 8.5pt; color: #b8860b; font-weight: 700; margin: 4px 0 6px; }
+.card ul { margin-left: 14px; font-size: 8pt; }
+.bullets { margin: 6px 0 6px 16px; font-size: 8.5pt; }
+.bullets li { margin-bottom: 3px; }
+.specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 12px;
+  font-size: 8pt;
+  margin: 8px 0;
+  padding: 8px 10px;
+  background: #eef2f7;
+  border-radius: 4px;
+}
+.specs div strong { color: #0a1628; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 8pt;
+  margin: 8px 0;
+}
+th, td {
+  border: 1px solid #cbd5e1;
+  padding: 5px 6px;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #0a1628; color: #fff; font-weight: 600; }
+tr:nth-child(even) td { background: #f8fafc; }
+.footer {
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 2px solid #0a1628;
+  font-size: 7.5pt;
+  color: #475569;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+}
+.footer strong { color: #0a1628; }
+.cta-box {
+  background: #0a1628;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 8.5pt;
+}
+.cta-box a { color: #fbbf24; text-decoration: none; }
+.disclaimer {
+  font-size: 7pt;
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 6px;
+}
+.qr-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
+  text-align: center;
+}
+.qr-item img { width: 38mm; height: 38mm; }
+.qr-item .label { font-size: 11pt; font-weight: 700; margin-top: 8px; color: #0a1628; }
+.qr-item .url { font-size: 7pt; color: #64748b; word-break: break-all; margin-top: 4px; }
+.bilingual { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.bilingual .col { padding: 8px; border: 1px solid #e2e8f0; border-radius: 4px; }
+.bilingual .lang { font-size: 7pt; font-weight: 700; color: #b8860b; text-transform: uppercase; margin-bottom: 4px; }
+@media print {
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: auto; min-height: auto; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="brand-bar">
+    <h1>VANTAGE SPORTS</h1>
+    <div class="tagline">Thailand Shuttle Testing Program / โครงการทดลองใช้ลูกขนไก่ ประเทศไทย</div>
+    <div class="meta">Partner Product Series · G4 · G6 · G7 · INFIV (OEM Partner) · Campaign TH-SAMPLE-2026-Q2</div>
+  </div>
+
+  <div class="bilingual">
+    <div class="col">
+      <div class="lang">English</div>
+      <p>VANTAGE SPORTS invites qualified <strong>badminton clubs, academies, and distributors</strong> in Thailand to test G4, G6, and G7 shuttlecocks before bulk orders.</p>
+      <p>Samples validate <strong>flight, durability, and speed-grade fit</strong> for your humidity, altitude, and player level. B2B partnership program — not a consumer retail offer.</p>
+    </div>
+    <div class="col">
+      <div class="lang">ไทย</div>
+      <p>VANTAGE SPORTS เชิญ <strong>สโมสร สถาบัน และตัวแทนจำหน่าย</strong> ที่ผ่านเกณฑ์ในประเทศไทย ทดสอบลูกขนไก่ G4, G6 และ G7 ก่อนสั่งซื้อจำนวนมาก</p>
+      <p>ตัวอย่างใช้ validate <strong>การบิน ความทนทาน และความเหมาะสมของความเร็วลูก</strong> โครงการ B2B — ไม่ใช่ข้อเสนอค้าปลีก</p>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr><th>SKU</th><th>EN Grade</th><th>TH Grade</th><th>Best For</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>G4</strong></td><td>Tournament Grade</td><td>เกรดการแข่งขัน</td><td>Leagues · tournaments · premium clubs</td></tr>
+      <tr><td><strong>G6</strong></td><td>Club Training</td><td>ฝึกซ้อมสโมสร</td><td>Daily academy · 20+ members</td></tr>
+      <tr><td><strong>G7</strong></td><td>Economy Training</td><td>ฝึกซ้อมประหยัด</td><td>Shops · schools · price-sensitive programs</td></tr>
+    </tbody>
+  </table>
+
+  <div class="bilingual">
+    <div class="col">
+      <div class="lang">What You Receive</div>
+      <ul class="bullets">
+        <li>2–4 sample tubes (G4 / G6 / G7 mix)</li>
+        <li>Flight &amp; durability evaluation checklist</li>
+        <li>Export pricing preview for Thailand</li>
+        <li>Follow-up from VANTAGE SPORTS product team</li>
+      </ul>
+    </div>
+    <div class="col">
+      <div class="lang">สิ่งที่ได้รับ</div>
+      <ul class="bullets">
+        <li>หลอดตัวอย่าง 2–4 หลอด (G4 / G6 / G7)</li>
+        <li>Checklist ประเมินการบินและความทนทาน</li>
+        <li>ตัวอย่างราคาส่งออกสำหรับตลาดไทย</li>
+        <li>ติดตามผลจากทีมผลิตภัณฑ์ VANTAGE SPORTS</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Testing Protocol / ขั้นตอนการทดสอบ</h3>
+  <table>
+    <thead><tr><th>#</th><th>EN</th><th>TH</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Store dry; acclimate 24h before opening</td><td>เก็บแห้ง ปล่อยอุณหภูมิห้อง 24 ชม.</td></tr>
+      <tr><td>2</td><td>Test min. 3 sessions · different player levels</td><td>ทดสอบอย่างน้อย 3 เซสชัน ระดับฝีมือต่างกัน</td></tr>
+      <tr><td>3</td><td>Record speed, drift, feather integrity, tube life</td><td>บันทึกความเร็ว การเคลื่อนที่ สภาพขน อายุหลอด</td></tr>
+      <tr><td>4</td><td>Submit feedback within 14 days of receipt</td><td>ส่ง feedback ภายใน 14 วันหลังรับตัวอย่าง</td></tr>
+    </tbody>
+  </table>
+
+  <div class="grid-2">
+    <div class="card">
+      <h3>Eligibility / ผู้มีสิทธิ</h3>
+      <p style="font-size:8pt">Club 20+ members OR active distributor · Reviewed within 3 business days · Limited monthly quota per country</p>
+    </div>
+    <div class="cta-box" style="margin-top:0">
+      <strong>Apply / สมัคร</strong><br/>
+      <a href="https://vantagesports.asia/th/shuttle-testing">https://vantagesports.asia/th/shuttle-testing</a><br/>
+      <a href="https://vantagesports.asia/th/distributor-program">https://vantagesports.asia/th/distributor-program</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div><strong>vantagesports.asia/th</strong> · partners@vantage-sports.com</div>
+    <div style="text-align:right;font-size:7pt">PREPARATION ONLY — NO OUTREACH · 2026-06-17</div>
+  </div>
+
+</div>
+</body>
+</html>

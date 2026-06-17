@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>VANTAGE SPORTS — G4 G6 G7 Product Comparison</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+@page { size: A4 portrait; margin: 10mm; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Sarabun", "Noto Sans Thai", "Segoe UI", system-ui, sans-serif;
+  color: #0f172a;
+  background: #fff;
+  font-size: 9.5pt;
+  line-height: 1.45;
+}
+.page {
+  width: 190mm;
+  min-height: 277mm;
+  margin: 0 auto;
+  padding: 0;
+  page-break-after: always;
+}
+.brand-bar {
+  background: linear-gradient(135deg, #0a1628 0%, #132337 100%);
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.brand-bar h1 {
+  font-size: 22pt;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+.brand-bar .tagline { font-size: 10pt; opacity: 0.92; margin-top: 4px; }
+.brand-bar .meta { font-size: 7.5pt; opacity: 0.7; margin-top: 8px; }
+.eyebrow {
+  font-size: 8pt;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #b8860b;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+h2 { font-size: 13pt; margin: 10px 0 6px; color: #0a1628; }
+h3 { font-size: 10pt; margin: 8px 0 4px; color: #1e3a5f; }
+p { margin-bottom: 6px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin: 10px 0; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0; }
+.card {
+  border: 1px solid #d4dce8;
+  border-radius: 6px;
+  padding: 10px;
+  background: #f8fafc;
+}
+.card .sku {
+  font-size: 16pt;
+  font-weight: 800;
+  color: #0a1628;
+  line-height: 1;
+}
+.card .grade { font-size: 8.5pt; color: #b8860b; font-weight: 700; margin: 4px 0 6px; }
+.card ul { margin-left: 14px; font-size: 8pt; }
+.bullets { margin: 6px 0 6px 16px; font-size: 8.5pt; }
+.bullets li { margin-bottom: 3px; }
+.specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 12px;
+  font-size: 8pt;
+  margin: 8px 0;
+  padding: 8px 10px;
+  background: #eef2f7;
+  border-radius: 4px;
+}
+.specs div strong { color: #0a1628; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 8pt;
+  margin: 8px 0;
+}
+th, td {
+  border: 1px solid #cbd5e1;
+  padding: 5px 6px;
+  text-align: left;
+  vertical-align: top;
+}
+th { background: #0a1628; color: #fff; font-weight: 600; }
+tr:nth-child(even) td { background: #f8fafc; }
+.footer {
+  margin-top: 12px;
+  padding-top: 8px;
+  border-top: 2px solid #0a1628;
+  font-size: 7.5pt;
+  color: #475569;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 10px;
+}
+.footer strong { color: #0a1628; }
+.cta-box {
+  background: #0a1628;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 8.5pt;
+}
+.cta-box a { color: #fbbf24; text-decoration: none; }
+.disclaimer {
+  font-size: 7pt;
+  color: #94a3b8;
+  text-align: center;
+  margin-top: 6px;
+}
+.qr-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
+  text-align: center;
+}
+.qr-item img { width: 38mm; height: 38mm; }
+.qr-item .label { font-size: 11pt; font-weight: 700; margin-top: 8px; color: #0a1628; }
+.qr-item .url { font-size: 7pt; color: #64748b; word-break: break-all; margin-top: 4px; }
+.bilingual { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.bilingual .col { padding: 8px; border: 1px solid #e2e8f0; border-radius: 4px; }
+.bilingual .lang { font-size: 7pt; font-weight: 700; color: #b8860b; text-transform: uppercase; margin-bottom: 4px; }
+@media print {
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: auto; min-height: auto; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="brand-bar">
+    <h1>VANTAGE SPORTS</h1>
+    <div class="tagline">Product Comparison Sheet / ตารางเปรียบเทียบผลิตภัณฑ์</div>
+    <div class="meta">G4 · G6 · G7 · Thailand Market · 2026-06-17</div>
+  </div>
+
+  <p>Side-by-side G-series shuttlecock comparison for distributor sell-in and club procurement. ใช้จัดวาง SKU ตามช่องทางขายในประเทศไทย</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width:18%">Attribute</th>
+        <th style="width:27%">G4 — Tournament</th>
+        <th style="width:27%">G6 — Club Training</th>
+        <th style="width:28%">G7 — Economy</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr><td><strong>Grade / เกรด</strong></td><td>Tournament Grade / เกรดการแข่งขัน</td><td>Club Training / ฝึกซ้อมสโมสร</td><td>Economy Training / ฝึกซ้อมประหยัด</td></tr>
+<tr><td><strong>Feather / ขน</strong></td><td>Patent goose · full-round / ขนไก่ Patent ทรงกลม</td><td>Goose back · 0.15 mm / ขนไก่ด้านหลัง 0.15 มม.</td><td>Golden duck · full-round / ขนเป็ด Golden ทรงกลม</td></tr>
+<tr><td><strong>Best For / เหมาะสำหรับ</strong></td><td>Tournaments · premium shops / ลีก ทัวร์นาเมนต์</td><td>Clubs · academies · 20+ members / สถาบัน 20+ คน</td><td>Shops · schools · new territories / ร้าน โรงเรียน</td></tr>
+<tr><td><strong>Durability / ความทนทาน</strong></td><td>Competition flight priority / เน้นการบินแข่งขัน</td><td>Extreme session durability / ทนทานสูงสุด</td><td>High value per tube / คุณค่าสูงต่อหลอด</td></tr>
+<tr><td><strong>MOQ Profile</strong></td><td>Mid-high tier orders</td><td>High-volume club supply</td><td>Entry-friendly starter MOQ</td></tr>
+<tr><td><strong>ASEAN Fit</strong></td><td>Humid markets · speed 77–79</td><td>Daily academy training</td><td>Price-sensitive growth markets</td></tr>
+<tr><td><strong>Series</strong></td><td>Partner Product Series · Goose</td><td>Partner Product Series · Goose</td><td>Partner Product Series · Duck</td></tr>
+<tr><td><strong>OEM Partner</strong></td><td>INFIV</td><td>INFIV</td><td>INFIV</td></tr>
+    </tbody>
+  </table>
+
+  <div class="specs">
+    <div><strong>Export QC:</strong> Fumigation-free · 49-step control · AI + microscope inspection</div>
+    <div><strong>Speed grades:</strong> 77 / 78 / 79 — request by venue humidity &amp; altitude</div>
+    <div><strong>Distribution:</strong> VANTAGE SPORTS — factory-direct ASEAN export packaging</div>
+    <div><strong>Sample program:</strong> Free club testing via vantagesports.asia/th/shuttle-testing</div>
+  </div>
+
+  <h3>Channel Positioning / การวางตำแหน่งช่องทาง</h3>
+  <div class="grid-3">
+    <div class="card"><div class="sku">G4</div><p style="font-size:8pt">Premium sell-in · tournament supply · elite academy upgrade path</p></div>
+    <div class="card"><div class="sku">G6</div><p style="font-size:8pt">Club volume driver · academy repeat orders · Bangkok + provincial belts</p></div>
+    <div class="card"><div class="sku">G7</div><p style="font-size:8pt">Shop entry SKU · school programs · margin-friendly starter orders</p></div>
+  </div>
+
+  <div class="cta-box">
+    Compare online: <a href="https://vantagesports.asia/th/product-comparison">https://vantagesports.asia/th/product-comparison</a> ·
+    Request samples: <a href="https://vantagesports.asia/th/shuttle-testing">https://vantagesports.asia/th/shuttle-testing</a>
+  </div>
+
+  <div class="footer">
+    <div><strong>vantagesports.asia/th</strong> · partners@vantage-sports.com</div>
+    <div style="text-align:right;font-size:7pt">PREPARATION ONLY — NO OUTREACH</div>
+  </div>
+
+</div>
+</body>
+</html>

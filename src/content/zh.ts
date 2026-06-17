@@ -9,9 +9,8 @@ export const site = {
     "VANTAGE SPORTS 帮助分销商、羽毛球俱乐部、体育用品店和 OEM 买家，在泰国、马来西亚、菲律宾和越南获取工厂直供羽毛球及贴牌装备。",
   url: "https://vantagesports.asia",
   email: "partners@vantage-sports.com",
-  // DEPLOYMENT DEMO: WhatsApp number must be replaced before real outreach.
-  whatsapp: "60123456789",
-  whatsappDisplay: "+60 12-345 6789",
+  whatsapp: "601137307654",
+  whatsappDisplay: "+60 11-3730 7654",
   facebook: "https://www.facebook.com/vantage.sports.sea",
   line: "https://line.me/R/ti/p/@vantagesports", // Disabled in UI — link returns 404 until official LINE is live
   markets: ["泰国", "马来西亚", "菲律宾", "越南"],

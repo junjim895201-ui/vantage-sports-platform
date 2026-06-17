@@ -8,9 +8,8 @@ export const site = {
     "VANTAGE SPORTS helps distributors, badminton clubs, sports shops, and OEM buyers access factory-direct shuttlecocks and private-label equipment across Thailand, Malaysia, Philippines, and Vietnam.",
   url: "https://vantagesports.asia",
   email: "partners@vantage-sports.com",
-  // DEPLOYMENT DEMO: WhatsApp number must be replaced before real outreach.
-  whatsapp: "60123456789",
-  whatsappDisplay: "+60 12-345 6789",
+  whatsapp: "601137307654",
+  whatsappDisplay: "+60 11-3730 7654",
   facebook: "https://www.facebook.com/vantage.sports.sea",
   line: "https://line.me/R/ti/p/@vantagesports", // Disabled in UI — link returns 404 until official LINE is live
   markets: ["Thailand", "Malaysia", "Philippines", "Vietnam"],
